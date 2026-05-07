@@ -125,4 +125,4 @@ Pure HTML + CSS + vanilla JS. Geen build step, geen dependencies, geen tracking.
 
 Caesar.schoorl@gmail.com
 
-Telefoon op slide 7: vul in het script onderaan van `index.html` de twee regels met `CONTACT_PHONE_*`; dan verschijnt de tel-regel automatisch.
+Telefoon op slide 7 wordt uit het script gevuld (`CONTACT_PHONE_*` onderaan `index.html`). Nu: +31 6 83032377.

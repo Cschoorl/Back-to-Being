@@ -864,7 +864,7 @@
           Volgende stap: <strong>10 minuten</strong>. Bel of mail. Wat voor jou het makkelijkst is.
         </p>
 
-        <!-- Telefoon: vul onderaan in index.html CONTACT_PHONE_E164_DIGITS + CONTACT_PHONE_SHOW in het script -->
+        <!-- Telefoon staat ingesteld onderaan het script (CONTACT_PHONE_*) -->
         <a class="cta-button closer-cta-main"
           href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being%3A%2010%20min%20koffie&amp;body=Hi%2C%0A%0AIk%20wil%20graag%20een%20kort%20koffiemoment%20(10%20min)%20om%20Back%20to%20Being%20te%20bespreken.%0A%0AHartelijke%20groet">
           Laten we koffie drinken <span class="arrow">→</span>
@@ -902,8 +902,8 @@
       const nextBtn = document.getElementById('next');
       let current = 0;
 
-      const CONTACT_PHONE_E164_DIGITS = ''; // Bijv.: '316512345678'
-      const CONTACT_PHONE_SHOW = ''; // Bijv.: '06 51 234 567'
+      const CONTACT_PHONE_E164_DIGITS = '31683032377';
+      const CONTACT_PHONE_SHOW = '+31 6 83032377';
 
       slides.forEach((_, i) => {
         const dot = document.createElement('button');
