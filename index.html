@@ -480,66 +480,82 @@
 
     .slide.dark .signature { color: rgba(247, 245, 240, 0.55); }
 
-    /* ---------- Slide 7: CLOSER ---------- */
+    /* ---------- Slide 7: CONTACT / CLOSER ---------- */
     .slide.closer {
       justify-content: space-between;
     }
 
-    .closer-kicker {
-      font-family: 'Fraunces', serif;
-      font-style: italic;
-      font-weight: 300;
-      font-size: clamp(1.2rem, 1.6vw, 1.7rem);
-      color: var(--ink-soft);
-      margin: auto 0 1.5vh;
-      letter-spacing: -0.005em;
+    .closer-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      max-width: 48rem;
     }
 
-    .closer-headline {
+    .closer-title {
       font-family: 'Fraunces', serif;
       font-weight: 400;
       font-variation-settings: "opsz" 144, "SOFT" 30;
-      font-size: clamp(3.5rem, 10vw, 12rem);
-      line-height: 0.92;
-      letter-spacing: -0.035em;
+      font-size: clamp(3rem, 8vw, 8.5rem);
+      line-height: 1.02;
+      letter-spacing: -0.032em;
       color: var(--ink);
-      margin-bottom: auto;
+      margin-bottom: 1.25rem;
     }
 
-    .closer-headline em {
-      font-style: italic;
-      font-weight: 400;
-      color: var(--green);
+    .closer-sub {
+      font-size: clamp(1rem, 1.15vw, 1.12rem);
+      color: var(--ink-soft);
+      line-height: 1.55;
+      max-width: 36ch;
+      margin-bottom: 2.25rem;
     }
 
-    .closer-foot {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 3rem;
-      align-items: end;
-      padding-top: 2.5vh;
+    .closer-cta-main {
+      margin-bottom: 2rem;
+    }
+
+    .closer-channels {
+      width: 100%;
       border-top: 1px solid var(--line);
+      padding-top: 1.85rem;
     }
 
-    .closer-tagline {
-      font-family: 'Fraunces', serif;
-      font-style: italic;
-      font-weight: 300;
-      font-size: clamp(1.05rem, 1.35vw, 1.35rem);
+    .closer-channels p {
+      margin-bottom: 0.65rem;
+    }
+
+    .closer-channels p:last-child {
+      margin-bottom: 0;
+    }
+
+    .closer-phone-wrap:not([hidden]) {
+      margin-bottom: 0.85rem !important;
+    }
+
+    .closer-channel-label {
+      display: inline-block;
+      min-width: 3.75rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
       color: var(--ink-soft);
-      max-width: 50ch;
-      line-height: 1.45;
-      margin-bottom: 0.4rem;
+      vertical-align: baseline;
     }
 
-    .closer-contact {
-      font-size: 0.85rem;
-      color: var(--ink-soft);
-      margin-top: 0.7rem;
+    .closer-channel-link {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--green);
+      text-decoration: none;
+      word-break: break-all;
     }
 
-    .closer-contact a { color: var(--green); text-decoration: none; }
-    .closer-contact a:hover { text-decoration: underline; }
+    .closer-channel-link:hover {
+      text-decoration: underline;
+    }
 
     /* ---------- Navigation ---------- */
     .nav {
@@ -673,7 +689,7 @@
         <div class="fact-clean">
           <span class="label">Wie</span>
           <span class="value">3 AI-founders</span>
-          <span class="note">Caesar &amp; team — Amsterdam.</span>
+          <span class="note">Team Back to Being — Amsterdam.</span>
         </div>
         <div class="fact-clean">
           <span class="label">Wat</span>
@@ -889,20 +905,14 @@
       </div>
 
       <div class="cta-block">
+        <p class="cta-text">
+          Volgende stap: <strong>10 minuten koffie</strong> — kort gesprek,
+          heldere vervolgstap. Contact staat op de volgende slide.
+        </p>
         <div>
-          <p class="cta-text">
-            Volgende stap: 30 minuten koffie. We komen graag langs,
-            of zien je in Amsterdam.
-          </p>
-          <p class="contact-line">
-            Caesar Schoorl — <a href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being%20—%20sponsoring">Caesar.schoorl@gmail.com</a>
-          </p>
-        </div>
-        <div>
-          <a class="cta-button" href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being%20—%20sponsoring">
-            Plan een koffie <span class="arrow">→</span>
+          <a class="cta-button" href="#" id="cta-next-contact">
+            Volgende slide <span class="arrow">→</span>
           </a>
-          <div class="signature">— Caesar &amp; team</div>
         </div>
       </div>
     </section>
@@ -915,34 +925,33 @@
           Back to Being
         </div>
         <div class="topbar-right">
-          <span>Eén laatste ding</span>
+          <span>Contact</span>
           <span>07 / 07</span>
         </div>
       </div>
 
-      <p class="closer-kicker">The world is our office.</p>
+      <div class="closer-body">
+        <h1 class="closer-title">Laten we koffie drinken.</h1>
+        <p class="closer-sub">
+          Volgende stap: <strong>10 minuten</strong>. Bel, mail — wat voor jou het makkelijkst is.
+        </p>
 
-      <h1 class="closer-headline">
-        Loop je<br />
-        <em>mee?</em>
-      </h1>
+        <!-- Telefoon: vul onderaan in index.html CONTACT_PHONE_E164_DIGITS + CONTACT_PHONE_SHOW in het script -->
+        <a class="cta-button closer-cta-main"
+          href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being%20%E2%80%94%2010%20min%20koffie&amp;body=Hi%2C%0A%0AIk%20wil%20graag%20een%20kort%20koffiemoment%20(10%20min)%20om%20Back%20to%20Being%20te%20bespreken.%0A%0AHartelijke%20groet">
+          Laten we koffie drinken <span class="arrow">→</span>
+        </a>
 
-      <div class="closer-foot">
-        <div>
-          <p class="closer-tagline">
-            We zoeken partners die dit verhaal mee willen schrijven.
-            Geen logo op een shirt — een plek in een avontuur dat
-            blijft hangen.
+        <div class="closer-channels">
+          <p class="closer-phone-wrap" hidden>
+            <span class="closer-channel-label">Tel</span>
+            <a class="closer-channel-link closer-phone-link" href="#">—</a>
           </p>
-          <p class="closer-contact">
-            Caesar Schoorl — <a href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being%20—%20sponsoring">Caesar.schoorl@gmail.com</a>
+          <p>
+            <span class="closer-channel-label">Mail</span>
+            <a class="closer-channel-link closer-mail-link"
+              href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being%20%E2%80%94%2010%20min%20koffie">Caesar.schoorl@gmail.com</a>
           </p>
-        </div>
-        <div>
-          <a class="cta-button" href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being%20—%20sponsoring">
-            Plan een koffie <span class="arrow">→</span>
-          </a>
-          <div class="signature">— Caesar &amp; team</div>
         </div>
       </div>
     </section>
@@ -964,6 +973,9 @@
       const prevBtn = document.getElementById('prev');
       const nextBtn = document.getElementById('next');
       let current = 0;
+
+      const CONTACT_PHONE_E164_DIGITS = ''; // Bijv.: '316512345678'
+      const CONTACT_PHONE_SHOW = ''; // Bijv.: '06 51 234 567'
 
       slides.forEach((_, i) => {
         const dot = document.createElement('button');
@@ -1002,6 +1014,29 @@
       });
 
       prevBtn.disabled = true;
+
+      (function applyContactPhone() {
+        var wrap = document.querySelector('.closer-phone-wrap');
+        var link = document.querySelector('.closer-phone-link');
+        if (!wrap || !link) return;
+        var clean = String(CONTACT_PHONE_E164_DIGITS || '').replace(/\D/g, '');
+        if (/^06\d{8}$/.test(clean)) clean = '31' + clean.slice(1);
+        if (clean.length >= 11) {
+          wrap.hidden = false;
+          link.href = 'tel:+' + clean;
+          link.textContent = CONTACT_PHONE_SHOW.trim() ? CONTACT_PHONE_SHOW : ('+' + clean);
+        } else {
+          wrap.hidden = true;
+        }
+      })();
+
+      var nextContactBtn = document.getElementById('cta-next-contact');
+      if (nextContactBtn) {
+        nextContactBtn.addEventListener('click', function (ev) {
+          ev.preventDefault();
+          go(total - 1);
+        });
+      }
     })();
   </script>
 </body>

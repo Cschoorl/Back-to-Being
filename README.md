@@ -122,4 +122,6 @@ Pure HTML + CSS + vanilla JS. Geen build step, geen dependencies, geen tracking.
 
 ## Contact
 
-**Caesar Schoorl** — [Caesar.schoorl@gmail.com](mailto:Caesar.schoorl@gmail.com)
+**Contact:** Caesar.schoorl@gmail.com
+
+Telefoon op slide 7: vul in het script onderaan van `index.html` de twee regels met `CONTACT_PHONE_*` — dan verschijnt de tel-regel automatisch.
