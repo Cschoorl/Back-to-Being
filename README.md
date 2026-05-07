@@ -1,9 +1,9 @@
-# Back to Being — Pitch deck voor Marleen Evertsz
+# Back to Being — Sponsorvoorstel
 
-Een 4-slide pitch deck voor een mogelijke samenwerking met Marleen Evertsz (Nxchange / Goldrepublic / House of Founders) rond het Camino-project **Back to Being**.
+Een 6-slide sponsor-pitch voor het Camino-project **Back to Being**.
 
-> Drie AI-founders. 115 km. Tui → Santiago.
-> Een Camino voor mentale gezondheid — en een nieuwe manier van bouwen.
+> **The World as our Office.**
+> Drie AI-founders. 115 km. Tui → Santiago. Een AI-tool voor stichting MIND.
 
 Statische HTML/CSS/JS — geen build, geen dependencies. Hostbaar op elke statische host.
 
@@ -30,10 +30,12 @@ python3 -m http.server 4173
 
 ## Slide-structuur
 
-1. **Hero** — *"Drie founders, honderdvijftien kilometer, één missie."*
-2. **De visie** — *The world as our office* + 3 pijlers (lopen & bouwen / MIND / mini-docu)
-3. **Waarom jij, Marleen** — match met Nxchange, Goldrepublic, House of Founders
-4. **Wat krijg je terug** — 4 concrete waardeproposities + call-to-action
+1. **Cover** — *The World as our Office.*
+2. **Wat is dit?** — Project in één zin + 4 facts (wie, wat, wanneer, voor wie)
+3. **Het plan** — *Lopen. Bouwen. Doneren.* in drie stappen
+4. **Waarom** — *Tech moet ons menselijker maken. Niet andersom.*
+5. **Het doel** — €20.000 ophalen + breakdown waar het naartoe gaat
+6. **Word partner** — Wat je terugkrijgt + CTA (koffie / mail)
 
 ## Exporteren naar PDF
 
@@ -54,7 +56,7 @@ De print-styling zorgt dat elke slide op zijn eigen pagina komt zonder navigatie
 
 ```
 .
-├── index.html      # Het hele deck — 4 slides, styling, en navigatie-script
+├── index.html      # Het hele deck — 6 slides, styling, en navigatie-script
 ├── README.md       # Dit bestand
 └── .gitignore
 ```
@@ -75,14 +77,14 @@ Eerste keer setup vanuit deze map:
 ```bash
 git init
 git add .
-git commit -m "Initial commit: Back to Being pitch deck"
+git commit -m "Initial commit: Back to Being sponsor deck"
 git branch -M main
 ```
 
 ### Optie A — GitHub via `gh` CLI
 
 ```bash
-gh repo create back-to-being-deck --private --source=. --remote=origin --push
+gh repo create back-to-being-deck --public --source=. --remote=origin --push
 ```
 
 ### Optie B — Handmatig (na repo aanmaken op GitHub/GitLab)
@@ -118,7 +120,6 @@ npx wrangler pages deploy . --project-name back-to-being-deck
 
 Pure HTML + CSS + vanilla JS. Geen build step, geen dependencies, geen tracking. Werkt offline na de eerste page load (Google Fonts uitgezonderd).
 
-## Credits
+## Contact
 
-Concept & copy: Caesar & team.
-Design: geïnspireerd op de visuele taal van House of Founders.
+**Caesar Schoorl** — [Caesar.schoorl@gmail.com](mailto:Caesar.schoorl@gmail.com)

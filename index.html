@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Back to Being — voor Marleen</title>
+  <title>Back to Being — The World as our Office</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -14,10 +14,9 @@
     :root {
       --bg:        #ebebe8;
       --bg-dark:   #0d0d0d;
-      --surface:   #f4f4f1;
       --ink:       #1a1a1a;
-      --ink-soft:  #5a5a55;
-      --line:      #d4d4cf;
+      --ink-soft:  #6a6a64;
+      --line:      #cfcfca;
       --line-dark: #2a2a28;
       --green:     #3d5a3d;
       --green-soft:#4f7050;
@@ -49,7 +48,7 @@
       inset: 0;
       display: flex;
       flex-direction: column;
-      padding: 7vh 7vw 8vh;
+      padding: 8vh 9vw;
       opacity: 0;
       transform: translateY(12px);
       transition: opacity 0.55s ease, transform 0.55s ease;
@@ -69,7 +68,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 5vh;
+      margin-bottom: 6vh;
     }
 
     .logo {
@@ -99,8 +98,8 @@
       display: flex;
       align-items: center;
       gap: 1.5rem;
-      font-size: 0.78rem;
-      letter-spacing: 0.12em;
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--ink-soft);
     }
@@ -109,7 +108,7 @@
     .pill {
       display: inline-flex;
       align-items: center;
-      padding: 0.5rem 1.1rem;
+      padding: 0.45rem 1rem;
       border: 1.5px solid var(--green);
       color: var(--green);
       border-radius: 100px;
@@ -119,10 +118,10 @@
       text-transform: uppercase;
       background: transparent;
       align-self: flex-start;
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
     }
 
-    .pill.dark { border-color: #6f8a6f; color: #a8c1a8; }
+    .pill.dark { border-color: rgba(168, 201, 140, 0.4); color: var(--green-light); }
 
     /* ---------- Headlines ---------- */
     .headline {
@@ -133,8 +132,8 @@
       line-height: 1.04;
       letter-spacing: -0.015em;
       color: var(--ink);
-      max-width: 24ch;
-      margin-bottom: 1.5rem;
+      max-width: 22ch;
+      margin-bottom: 2rem;
     }
 
     .headline em {
@@ -149,227 +148,261 @@
     .lede {
       font-family: 'Inter', sans-serif;
       font-weight: 400;
-      font-size: clamp(1rem, 1.2vw, 1.2rem);
-      line-height: 1.55;
+      font-size: clamp(1rem, 1.15vw, 1.15rem);
+      line-height: 1.6;
       color: var(--ink-soft);
-      max-width: 50ch;
-      margin-bottom: 4vh;
+      max-width: 56ch;
+      margin-bottom: 5vh;
     }
 
-    .slide.dark .lede { color: rgba(247, 245, 240, 0.72); }
+    .slide.dark .lede { color: rgba(247, 245, 240, 0.7); }
 
-    /* ---------- Slide 1: facts grid ---------- */
-    .facts {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.4rem;
-      margin-top: auto;
+    /* ---------- Slide 1: COVER (ultra clean) ---------- */
+    .slide.cover {
+      justify-content: space-between;
     }
 
-    .fact {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 1.6rem 1.4rem 1.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-      min-height: 160px;
-    }
-
-    .fact-label {
-      font-size: 0.7rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--green);
-      font-weight: 500;
-    }
-
-    .fact-value {
+    .cover-headline {
       font-family: 'Fraunces', serif;
+      font-weight: 400;
+      font-variation-settings: "opsz" 144, "SOFT" 30;
+      font-size: clamp(3rem, 8.5vw, 9.5rem);
+      line-height: 0.95;
+      letter-spacing: -0.035em;
+      color: var(--ink);
+      margin: auto 0 0;
+    }
+
+    .cover-headline em {
       font-style: italic;
       font-weight: 400;
-      font-size: clamp(1.4rem, 1.9vw, 1.85rem);
-      line-height: 1.15;
-      color: var(--ink);
-    }
-
-    .fact-note {
-      font-size: 0.85rem;
-      line-height: 1.5;
-      color: var(--ink-soft);
-      margin-top: auto;
-    }
-
-    /* ---------- Slide 2: 3 step cards with bullets ---------- */
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.6rem;
-      margin-top: auto;
-    }
-
-    .step {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 1.8rem 1.6rem;
-      display: flex;
-      flex-direction: column;
-      min-height: 320px;
-    }
-
-    .step-num {
-      font-family: 'Fraunces', serif;
-      font-style: italic;
-      font-weight: 400;
-      font-size: 2.4rem;
       color: var(--green);
-      line-height: 1;
-      margin-bottom: 0.8rem;
     }
 
-    .step h3 {
-      font-family: 'Fraunces', serif;
-      font-weight: 400;
-      font-size: clamp(1.4rem, 1.9vw, 1.85rem);
-      line-height: 1.15;
-      color: var(--ink);
-      margin-bottom: 1.2rem;
-    }
-
-    .step ul {
-      list-style: none;
+    .cover-foot {
       display: flex;
-      flex-direction: column;
-      gap: 0.7rem;
-      margin-top: auto;
+      justify-content: space-between;
+      align-items: end;
+      gap: 2vw;
+      padding-top: 2.5vh;
+      border-top: 1px solid var(--line);
+      margin-top: 6vh;
     }
 
-    .step ul li {
-      font-size: 0.95rem;
-      line-height: 1.45;
-      color: var(--ink);
-      padding-left: 1.4rem;
-      position: relative;
-    }
-
-    .step ul li::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0.55rem;
-      width: 16px;
-      height: 1.5px;
-      background: var(--green);
-    }
-
-    /* ---------- Slide 3: vision + match ---------- */
-    .vision-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4vw;
-      flex: 1;
-      align-items: start;
-      margin-top: 1vh;
-    }
-
-    .vision-bullets {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 1.1rem;
-      margin-top: 1vh;
-    }
-
-    .vision-bullets li {
-      display: grid;
-      grid-template-columns: 28px 1fr;
-      gap: 0.9rem;
-      align-items: start;
-      padding-bottom: 1.1rem;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .vision-bullets li:last-child { border-bottom: none; }
-
-    .vision-bullets .bullet-num {
-      font-family: 'Fraunces', serif;
-      font-style: italic;
-      font-weight: 400;
-      font-size: 1.1rem;
-      color: var(--green);
-      line-height: 1.3;
-    }
-
-    .vision-bullets .bullet-text {
+    .cover-tagline {
       font-family: 'Fraunces', serif;
       font-style: italic;
       font-weight: 300;
-      font-size: clamp(1.05rem, 1.35vw, 1.3rem);
-      line-height: 1.4;
+      font-size: clamp(1.05rem, 1.35vw, 1.35rem);
+      color: var(--ink-soft);
+      max-width: 52ch;
+      line-height: 1.5;
+    }
+
+    .cover-foot-meta {
+      text-align: right;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      line-height: 1.8;
+      flex-shrink: 0;
+    }
+
+    /* ---------- Generic line-divided list (used on slides 2,3,5,6) ---------- */
+    .rows {
+      display: flex;
+      flex-direction: column;
+      margin-top: auto;
+      border-top: 1px solid var(--line);
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 60px 1fr auto;
+      gap: 2.5rem;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--line);
+      align-items: baseline;
+    }
+
+    .row .row-num {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 0.95rem;
+      color: var(--green);
+      letter-spacing: 0.05em;
+    }
+
+    .row .row-title {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      font-size: clamp(1.15rem, 1.5vw, 1.45rem);
       color: var(--ink);
+      line-height: 1.25;
     }
 
-    .vision-side {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 1.8rem 1.6rem;
+    .row .row-detail {
+      font-size: clamp(0.9rem, 1.05vw, 1.05rem);
+      color: var(--ink-soft);
+      line-height: 1.5;
+      max-width: 56ch;
+      text-align: right;
     }
 
-    .vision-side .label {
+    .row-tag {
+      display: inline-block;
+      margin-left: 0.6rem;
+      padding: 0.18rem 0.55rem;
+      border: 1px solid var(--green);
+      color: var(--green);
+      border-radius: 100px;
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      vertical-align: middle;
+      transform: translateY(-2px);
+    }
+
+    /* dark variant */
+    .slide.dark .rows { border-top-color: var(--line-dark); }
+    .slide.dark .row { border-bottom-color: var(--line-dark); }
+    .slide.dark .row .row-num { color: var(--green-light); }
+    .slide.dark .row .row-title { color: var(--cream); }
+    .slide.dark .row .row-detail { color: rgba(247, 245, 240, 0.7); }
+    .slide.dark .row-tag { border-color: rgba(168, 201, 140, 0.5); color: var(--green-light); }
+
+    /* ---------- Slide 2: facts row (clean) ---------- */
+    .facts-clean {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: auto;
+      border-top: 1px solid var(--line);
+      padding-top: 2rem;
+    }
+
+    .fact-clean {
+      padding: 0 1.5rem 0 0;
+      border-right: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .fact-clean:last-child { border-right: none; }
+    .fact-clean:not(:first-child) { padding-left: 1.5rem; }
+
+    .fact-clean .label {
       font-size: 0.7rem;
       letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--green);
       font-weight: 500;
-      margin-bottom: 1.2rem;
     }
 
-    .vision-side h4 {
+    .fact-clean .value {
       font-family: 'Fraunces', serif;
       font-style: italic;
       font-weight: 400;
-      font-size: clamp(1.3rem, 1.6vw, 1.55rem);
-      line-height: 1.2;
+      font-size: clamp(1.4rem, 1.85vw, 1.85rem);
       color: var(--ink);
-      margin-bottom: 1.3rem;
+      line-height: 1.15;
     }
 
-    .match-list {
+    .fact-clean .note {
+      font-size: 0.85rem;
+      color: var(--ink-soft);
+      line-height: 1.45;
+    }
+
+    /* ---------- Slide 4: vision bullets (clean) ---------- */
+    .vision-list {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 0.9rem;
+      margin-top: auto;
+      border-top: 1px solid var(--line);
     }
 
-    .match-list li {
+    .vision-list li {
       display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 1rem;
-      align-items: baseline;
-      padding-bottom: 0.9rem;
+      grid-template-columns: 60px 1fr;
+      gap: 2rem;
+      padding: 1.6rem 0;
       border-bottom: 1px solid var(--line);
+      align-items: baseline;
     }
 
-    .match-list li:last-child { border-bottom: none; padding-bottom: 0; }
-
-    .match-list .brand {
+    .vision-list .num {
       font-family: 'Fraunces', serif;
-      font-weight: 500;
-      font-size: 1.05rem;
-      color: var(--ink);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 0.95rem;
+      color: var(--green);
+      letter-spacing: 0.05em;
     }
 
-    .match-list .tag {
-      font-size: 0.78rem;
-      letter-spacing: 0.1em;
+    .vision-list .text {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(1.15rem, 1.55vw, 1.55rem);
+      line-height: 1.4;
+      color: var(--ink);
+      max-width: 70ch;
+    }
+
+    /* ---------- Slide 5: goal (clean, no box) ---------- */
+    .goal-hero-clean {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 4vw;
+      align-items: center;
+      padding: 1vh 0 4vh;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 3vh;
+    }
+
+    .goal-amount-clean {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(4rem, 9vw, 9rem);
+      color: var(--green);
+      line-height: 0.9;
+      letter-spacing: -0.02em;
+    }
+
+    .goal-side-clean .label {
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
+      color: var(--green);
+      font-weight: 500;
+      margin-bottom: 0.7rem;
+    }
+
+    .goal-side-clean p {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(1.1rem, 1.45vw, 1.45rem);
+      color: var(--ink);
+      line-height: 1.45;
+      max-width: 50ch;
+    }
+
+    .goal-side-clean p strong {
+      font-style: normal;
+      font-weight: 500;
       color: var(--green);
     }
 
-    /* ---------- Slide 4 (dark CTA) ---------- */
+    /* ---------- Slide 6 (dark CTA) ---------- */
     .slide.dark {
       background: var(--bg-dark);
       color: var(--cream);
@@ -379,117 +412,13 @@
     .slide.dark .logo { color: var(--cream); }
     .slide.dark .logo-mark { border-color: var(--cream); color: var(--cream); }
 
-    .goal-banner {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 2rem;
-      align-items: center;
-      padding: 1.4rem 1.8rem;
-      background: rgba(168, 201, 140, 0.08);
-      border: 1px solid rgba(168, 201, 140, 0.28);
-      border-radius: 14px;
-      margin-bottom: 3vh;
-    }
-
-    .goal-amount {
-      font-family: 'Fraunces', serif;
-      font-style: italic;
-      font-weight: 400;
-      font-size: clamp(2.4rem, 4vw, 3.6rem);
-      color: var(--green-light);
-      line-height: 1;
-      letter-spacing: -0.01em;
-    }
-
-    .goal-text .goal-label {
-      font-size: 0.7rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--green-light);
-      font-weight: 500;
-      margin-bottom: 0.4rem;
-    }
-
-    .goal-text p {
-      font-size: clamp(0.95rem, 1.1vw, 1.08rem);
-      line-height: 1.5;
-      color: rgba(247, 245, 240, 0.88);
-      max-width: 70ch;
-    }
-
-    .goal-text p strong {
-      color: var(--cream);
-      font-weight: 500;
-    }
-
-    .ask-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4vw;
-      margin-top: 1vh;
-      flex: 1;
-    }
-
-    .ask-block .label {
-      font-size: 0.7rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--green-light);
-      font-weight: 500;
-      margin-bottom: 1.2rem;
-    }
-
-    .ask-block h3 {
-      font-family: 'Fraunces', serif;
-      font-weight: 400;
-      font-size: clamp(1.4rem, 1.8vw, 1.75rem);
-      line-height: 1.15;
-      color: var(--cream);
-      margin-bottom: 1.4rem;
-    }
-
-    .ask-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.9rem;
-    }
-
-    .ask-list li {
-      display: grid;
-      grid-template-columns: 24px 1fr;
-      gap: 0.8rem;
-      align-items: start;
-      padding-bottom: 0.9rem;
-      border-bottom: 1px solid var(--line-dark);
-      font-size: 0.95rem;
-      line-height: 1.45;
-      color: rgba(247, 245, 240, 0.85);
-    }
-
-    .ask-list li:last-child { border-bottom: none; }
-
-    .ask-list .check {
-      color: var(--green-light);
-      font-family: 'Fraunces', serif;
-      font-style: italic;
-      font-weight: 400;
-      font-size: 1rem;
-      line-height: 1.45;
-    }
-
-    .ask-list strong {
-      color: var(--cream);
-      font-weight: 500;
-    }
-
     .cta-block {
       margin-top: auto;
       display: grid;
       grid-template-columns: 1fr auto;
       gap: 3rem;
       align-items: center;
-      padding-top: 2.5rem;
+      padding-top: 3vh;
       border-top: 1px solid var(--line-dark);
     }
 
@@ -497,11 +426,21 @@
       font-family: 'Fraunces', serif;
       font-style: italic;
       font-weight: 300;
-      font-size: clamp(1.15rem, 1.5vw, 1.5rem);
-      line-height: 1.4;
-      color: rgba(247, 245, 240, 0.9);
-      max-width: 42ch;
+      font-size: clamp(1.15rem, 1.45vw, 1.45rem);
+      line-height: 1.45;
+      color: rgba(247, 245, 240, 0.88);
+      max-width: 46ch;
     }
+
+    .contact-line {
+      font-size: 0.85rem;
+      color: rgba(247, 245, 240, 0.55);
+      letter-spacing: 0.02em;
+      margin-top: 0.7rem;
+    }
+
+    .contact-line a { color: var(--green-light); text-decoration: none; }
+    .contact-line a:hover { text-decoration: underline; }
 
     .cta-button {
       display: inline-flex;
@@ -528,8 +467,8 @@
       font-family: 'Fraunces', serif;
       font-style: italic;
       font-weight: 300;
-      font-size: 0.9rem;
-      color: rgba(247, 245, 240, 0.6);
+      font-size: 0.85rem;
+      color: rgba(247, 245, 240, 0.55);
       margin-top: 0.8rem;
       text-align: right;
     }
@@ -593,8 +532,10 @@
     }
 
     @media (max-width: 900px) {
-      .facts, .steps { grid-template-columns: 1fr 1fr; }
-      .vision-grid, .ask-grid { grid-template-columns: 1fr; gap: 3vh; }
+      .facts-clean { grid-template-columns: 1fr 1fr; }
+      .row { grid-template-columns: 40px 1fr; }
+      .row .row-detail { grid-column: 2; text-align: left; }
+      .goal-hero-clean { grid-template-columns: 1fr; gap: 1rem; }
       .cta-block { grid-template-columns: 1fr; gap: 1.5rem; }
       .slide { padding: 5vh 6vw; }
     }
@@ -603,16 +544,46 @@
 <body>
   <div class="deck" id="deck">
 
-    <!-- ============ SLIDE 1: WAT ============ -->
-    <section class="slide active" data-index="0">
+    <!-- ============ SLIDE 1: COVER ============ -->
+    <section class="slide cover active" data-index="0">
       <div class="topbar">
         <div class="logo">
           <span class="logo-mark">B</span>
           Back to Being
         </div>
         <div class="topbar-right">
-          <span>Voor Marleen Evertsz</span>
-          <span>01 / 04</span>
+          <span>Sponsorvoorstel</span>
+          <span>Zomer 2026</span>
+        </div>
+      </div>
+
+      <h1 class="cover-headline">
+        The world<br />
+        as our <em>office.</em>
+      </h1>
+
+      <div class="cover-foot">
+        <p class="cover-tagline">
+          Drie founders lopen 115 km en bouwen onderweg een AI-tool
+          voor mentale gezondheid.
+        </p>
+        <div class="cover-foot-meta">
+          Tui → Santiago<br />
+          Voor stichting MIND
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SLIDE 2: WAT IS DIT? ============ -->
+    <section class="slide" data-index="1">
+      <div class="topbar">
+        <div class="logo">
+          <span class="logo-mark">B</span>
+          Back to Being
+        </div>
+        <div class="topbar-right">
+          <span>Wat is dit?</span>
+          <span>02 / 06</span>
         </div>
       </div>
 
@@ -625,49 +596,49 @@
       </h1>
 
       <p class="lede">
-        In het kort: wij zijn 3 AI-founders uit Amsterdam. Deze zomer
-        lopen we de Camino van Tui naar Santiago. Onderweg bouwen we
-        live een AI-tool — die we daarna gratis weggeven aan stichting MIND.
+        Wij zijn 3 AI-founders uit Amsterdam. Deze zomer lopen we de
+        Camino van Tui naar Santiago. Onderweg bouwen we live een
+        AI-tool — die we daarna gratis weggeven aan stichting MIND.
       </p>
 
-      <div class="facts">
-        <div class="fact">
-          <span class="fact-label">Wie</span>
-          <span class="fact-value">3 AI‑founders</span>
-          <span class="fact-note">Caesar &amp; team — uit Amsterdam.</span>
+      <div class="facts-clean">
+        <div class="fact-clean">
+          <span class="label">Wie</span>
+          <span class="value">3 AI-founders</span>
+          <span class="note">Caesar &amp; team — Amsterdam.</span>
         </div>
-        <div class="fact">
-          <span class="fact-label">Wat</span>
-          <span class="fact-value">115 km lopen</span>
-          <span class="fact-note">Tui → Santiago de Compostela.</span>
+        <div class="fact-clean">
+          <span class="label">Wat</span>
+          <span class="value">115 km lopen</span>
+          <span class="note">Tui → Santiago.</span>
         </div>
-        <div class="fact">
-          <span class="fact-label">Wanneer</span>
-          <span class="fact-value">Zomer 2026</span>
-          <span class="fact-note">Zes dagen, één rugzak.</span>
+        <div class="fact-clean">
+          <span class="label">Wanneer</span>
+          <span class="value">Zomer 2026</span>
+          <span class="note">Zes dagen, één rugzak.</span>
         </div>
-        <div class="fact">
-          <span class="fact-label">Voor wie</span>
-          <span class="fact-value">Stichting MIND</span>
-          <span class="fact-note">Voor mentale gezondheid.</span>
+        <div class="fact-clean">
+          <span class="label">Voor wie</span>
+          <span class="value">Stichting MIND</span>
+          <span class="note">Voor mentale gezondheid.</span>
         </div>
       </div>
     </section>
 
-    <!-- ============ SLIDE 2: HOE ============ -->
-    <section class="slide" data-index="1">
+    <!-- ============ SLIDE 3: HET PLAN ============ -->
+    <section class="slide" data-index="2">
       <div class="topbar">
         <div class="logo">
           <span class="logo-mark">B</span>
           Back to Being
         </div>
         <div class="topbar-right">
-          <span>Wat we doen</span>
-          <span>02 / 04</span>
+          <span>Het plan</span>
+          <span>03 / 06</span>
         </div>
       </div>
 
-      <span class="pill">Wat we doen</span>
+      <span class="pill">Het plan</span>
 
       <h1 class="headline">
         Lopen. Bouwen. <em>Doneren.</em>
@@ -677,41 +648,27 @@
         Drie simpele stappen. Geen kantoor, geen powerpoint — gewoon doen.
       </p>
 
-      <div class="steps">
-        <article class="step">
-          <div class="step-num">01</div>
-          <h3>We lopen.</h3>
-          <ul>
-            <li>115 km in 6 dagen</li>
-            <li>Tui → Santiago</li>
-            <li>Eén rugzak. Geen kantoor.</li>
-          </ul>
-        </article>
-
-        <article class="step">
-          <div class="step-num">02</div>
-          <h3>We bouwen onderweg.</h3>
-          <ul>
-            <li>Een AI-tool, live gebouwd</li>
-            <li>Met spraak en smart glasses</li>
-            <li>Camera's draaien alles op</li>
-          </ul>
-        </article>
-
-        <article class="step">
-          <div class="step-num">03</div>
-          <h3>We doneren.</h3>
-          <ul>
-            <li>Tool gaat gratis naar MIND</li>
-            <li>Voor mensen met mentale klachten</li>
-            <li>Plus: een mini-docu van de reis</li>
-          </ul>
-        </article>
+      <div class="rows">
+        <div class="row">
+          <span class="row-num">01</span>
+          <span class="row-title">We lopen.</span>
+          <span class="row-detail">115 km in 6 dagen · Tui → Santiago · Eén rugzak.</span>
+        </div>
+        <div class="row">
+          <span class="row-num">02</span>
+          <span class="row-title">We bouwen onderweg.</span>
+          <span class="row-detail">AI-tool, live · Spraak en smart glasses · Camera's draaien.</span>
+        </div>
+        <div class="row">
+          <span class="row-num">03</span>
+          <span class="row-title">We doneren.</span>
+          <span class="row-detail">Tool gratis naar MIND · Plus een mini-docu.</span>
+        </div>
       </div>
     </section>
 
-    <!-- ============ SLIDE 3: WAAROM ============ -->
-    <section class="slide" data-index="2">
+    <!-- ============ SLIDE 4: WAAROM ============ -->
+    <section class="slide" data-index="3">
       <div class="topbar">
         <div class="logo">
           <span class="logo-mark">B</span>
@@ -719,120 +676,162 @@
         </div>
         <div class="topbar-right">
           <span>Waarom</span>
-          <span>03 / 04</span>
+          <span>04 / 06</span>
         </div>
       </div>
 
-      <span class="pill">Waarom we dit doen</span>
+      <span class="pill">De filosofie</span>
 
       <h1 class="headline">
-        Tech moet ons mensélijker maken.<br />
-        <em>Niet andersom.</em>
+        We nemen het kantoor<br />
+        <em>naar buiten.</em>
       </h1>
 
-      <div class="vision-grid">
-        <ul class="vision-bullets">
-          <li>
-            <span class="bullet-num">01</span>
-            <span class="bullet-text">We gedragen ons steeds meer als robots.</span>
-          </li>
-          <li>
-            <span class="bullet-num">02</span>
-            <span class="bullet-text">AI kan ons juist helpen om weer mens te zijn.</span>
-          </li>
-          <li>
-            <span class="bullet-num">03</span>
-            <span class="bullet-text">Daarom bouwen we onderweg, niet vanuit een kantoor.</span>
-          </li>
-          <li>
-            <span class="bullet-num">04</span>
-            <span class="bullet-text">The world as our office — letterlijk.</span>
-          </li>
-        </ul>
+      <p class="lede">
+        Niet bouwen vanachter een bureau, maar lopend. Reflecterend.
+        In beweging. We laten zien dat tech ons juist mensélijker
+        kan maken — als je 'm op de goede manier inzet.
+      </p>
 
-        <aside class="vision-side">
-          <div class="label">Waarom jij, Marleen</div>
-          <h4>Jouw drie werelden passen precies bij wat dit is.</h4>
-          <ul class="match-list">
-            <li>
-              <span class="brand">Nxchange</span>
-              <span class="tag">Ondernemerschap</span>
-            </li>
-            <li>
-              <span class="brand">Goldrepublic</span>
-              <span class="tag">Vertrouwen</span>
-            </li>
-            <li>
-              <span class="brand">House of Founders</span>
-              <span class="tag">Community &amp; lef</span>
-            </li>
-          </ul>
-        </aside>
-      </div>
+      <ul class="vision-list">
+        <li>
+          <span class="num">01</span>
+          <span class="text">We werken steeds robotachtiger — terwijl AI dat zou moeten oplossen, niet versterken.</span>
+        </li>
+        <li>
+          <span class="num">02</span>
+          <span class="text">Mentale gezondheid staat onder druk. Hoog tijd voor een ander gesprek.</span>
+        </li>
+        <li>
+          <span class="num">03</span>
+          <span class="text">Beweging maakt creativiteit. Lopen is denken, denken is bouwen.</span>
+        </li>
+        <li>
+          <span class="num">04</span>
+          <span class="text">De mini-docu maakt het verhaal blijvend — voor onszelf, voor MIND, voor onze partners.</span>
+        </li>
+      </ul>
     </section>
 
-    <!-- ============ SLIDE 4: DE VRAAG (dark) ============ -->
-    <section class="slide dark" data-index="3">
+    <!-- ============ SLIDE 5: HET DOEL ============ -->
+    <section class="slide" data-index="4">
       <div class="topbar">
         <div class="logo">
           <span class="logo-mark">B</span>
           Back to Being
         </div>
         <div class="topbar-right">
-          <span>De vraag</span>
-          <span>04 / 04</span>
+          <span>Het doel</span>
+          <span>05 / 06</span>
         </div>
       </div>
 
-      <span class="pill dark">Het doel</span>
+      <span class="pill">Het doel</span>
 
       <h1 class="headline">
         Help ons <em>€20k</em> op te halen.
       </h1>
 
-      <div class="goal-banner">
-        <div class="goal-amount">€20.000</div>
-        <div class="goal-text">
-          <div class="goal-label">Ons doel — alle beetjes helpen</div>
+      <div class="goal-hero-clean">
+        <div class="goal-amount-clean">€20.000</div>
+        <div class="goal-side-clean">
+          <div class="label">Alle beetjes helpen</div>
           <p>
-            Met <strong>z'n drieën</strong> halen we dit op om alles
-            mogelijk te maken: reis, productie, tech &amp; de donatie aan
-            MIND. <strong>Elk bedrag telt</strong> — samen doen we het.
+            Met z'n drieën halen we dit op om alles mogelijk te maken.
+            <strong>Elk bedrag telt</strong> — samen doen we het.
           </p>
         </div>
       </div>
 
-      <div class="ask-grid">
-        <div class="ask-block">
-          <div class="label">Waar gaat het naartoe</div>
-          <h3>Vier posten — transparant en simpel.</h3>
-          <ul class="ask-list">
-            <li><span class="check">·</span><span><strong>Reis &amp; verblijf</strong> voor 3 founders + crew</span></li>
-            <li><span class="check">·</span><span><strong>Productie mini-docu</strong> (camera, edit, muziek)</span></li>
-            <li><span class="check">·</span><span><strong>Tech</strong> (smart glasses, AI-credits, software)</span></li>
-            <li><span class="check">·</span><span><strong>Donatie aan MIND</strong> namens de partners</span></li>
-          </ul>
+      <div class="rows" style="margin-top:0;">
+        <div class="row">
+          <span class="row-num">01</span>
+          <span class="row-title">Reis &amp; verblijf</span>
+          <span class="row-detail">3 founders + crew, 6 dagen on the road.</span>
         </div>
+        <div class="row">
+          <span class="row-num">02</span>
+          <span class="row-title">Productie mini-docu</span>
+          <span class="row-detail">Camera, edit, muziek, kleurcorrectie.</span>
+        </div>
+        <div class="row">
+          <span class="row-num">03</span>
+          <span class="row-title">Tech &amp; AI</span>
+          <span class="row-detail">Smart glasses, AI-credits, software, microfoons.</span>
+        </div>
+        <div class="row">
+          <span class="row-num">04</span>
+          <span class="row-title">Kleding &amp; uitrusting</span>
+          <span class="row-detail">Schoeisel, rugzak, gear — zichtbaar in beeld.</span>
+        </div>
+        <div class="row">
+          <span class="row-num">05</span>
+          <span class="row-title">Donatie aan MIND</span>
+          <span class="row-detail">Direct naar de stichting, namens onze partners.</span>
+        </div>
+      </div>
+    </section>
 
-        <div class="ask-block">
-          <div class="label">Wat je terugkrijgt</div>
-          <h3>Geen logo op een shirt — een verhaal waar je in zit.</h3>
-          <ul class="ask-list">
-            <li><span class="check">·</span><span><strong>Naam &amp; merk</strong> in de mini-docu</span></li>
-            <li><span class="check">·</span><span><strong>Content</strong> klaar voor House of Founders</span></li>
-            <li><span class="check">·</span><span><strong>Keynote of fireside</strong> bij founders na afloop</span></li>
-            <li><span class="check">·</span><span><strong>Impact</strong>: jouw naam aan een gratis AI-tool voor MIND</span></li>
-          </ul>
+    <!-- ============ SLIDE 6: PARTNER WORDEN (dark) ============ -->
+    <section class="slide dark" data-index="5">
+      <div class="topbar">
+        <div class="logo">
+          <span class="logo-mark">B</span>
+          Back to Being
+        </div>
+        <div class="topbar-right">
+          <span>Word partner</span>
+          <span>06 / 06</span>
+        </div>
+      </div>
+
+      <span class="pill dark">Wat krijg je terug</span>
+
+      <h1 class="headline">
+        Word jij onze<br />
+        <em>partner in dit verhaal?</em>
+      </h1>
+
+      <p class="lede">
+        Geen logo op een shirt. Vier dingen krijg je terug — eentje
+        die je nergens anders krijgt.
+      </p>
+
+      <div class="rows">
+        <div class="row">
+          <span class="row-num">01</span>
+          <span class="row-title">Naam &amp; merk in de mini-docu</span>
+          <span class="row-detail">Prominent verbonden aan een verhaal dat blijft hangen.</span>
+        </div>
+        <div class="row">
+          <span class="row-num">02</span>
+          <span class="row-title">Content voor jouw kanalen</span>
+          <span class="row-detail">Beelden, quotes en updates — klaar om te delen.</span>
+        </div>
+        <div class="row">
+          <span class="row-num">03</span>
+          <span class="row-title">Het kantoor naar buiten — voor jouw team <span class="row-tag">uniek</span></span>
+          <span class="row-detail">Walking workshop + AI session bij jullie. Wij brengen Back to Being naar je bedrijf.</span>
+        </div>
+        <div class="row">
+          <span class="row-num">04</span>
+          <span class="row-title">Impact die je kunt claimen</span>
+          <span class="row-detail">Gratis AI-tool voor MIND in jouw naam · first-look · proces-updates.</span>
         </div>
       </div>
 
       <div class="cta-block">
-        <p class="cta-text">
-          Volgende stap: 30 minuten koffie. Wij komen graag bij je
-          langs, of zien je in House of Founders.
-        </p>
         <div>
-          <a class="cta-button" href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being%20—%20koffie">
+          <p class="cta-text">
+            Volgende stap: 30 minuten koffie. We komen graag langs,
+            of zien je in Amsterdam.
+          </p>
+          <p class="contact-line">
+            Caesar Schoorl — <a href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being%20—%20sponsoring">Caesar.schoorl@gmail.com</a>
+          </p>
+        </div>
+        <div>
+          <a class="cta-button" href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being%20—%20sponsoring">
             Plan een koffie <span class="arrow">→</span>
           </a>
           <div class="signature">— Caesar &amp; team</div>
