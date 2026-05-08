@@ -7,6 +7,25 @@ Een sponsor-pitch voor het Camino-project **Back to Being** (HTML-deck, meerdere
 
 Statische HTML/CSS/JS. Geen build, geen dependencies. Hostbaar op elke statische host.
 
+## Drie bestanden
+
+| Bestand | Wanneer gebruiken |
+|---|---|
+| `index.html` | Origineel deck (7 slides). Behouden voor referentie. |
+| `met-bedragen.html` | **Mét bedragen.** 8 slides incl. sponsortiers + budget per post + live progressbar (`SECURED_AMOUNT` aanpassen vóór de pitch). Slide 6 toont tier-prijzen. |
+| `zonder-bedragen.html` | **Zónder bedragen.** Voor verkennende gesprekken waar je geen prijs-anker wilt zetten. Slide 5 toont alleen kostencategorieën, slide 6 toont tiers als scope-niveaus (Volledig / Verbonden / In natura). |
+
+### Live progressbar bijwerken (mét-bedragen versie)
+
+In `met-bedragen.html`, zoek de twee constanten in het `<script>` blok:
+
+```js
+const SECURED_AMOUNT = 0;     // EUR reeds toegezegd
+const TARGET_AMOUNT  = 20000; // EUR doel
+```
+
+Pas `SECURED_AMOUNT` aan voor elke pitch. De progressbar en het "X% reeds toegezegd"-label updaten automatisch.
+
 **Live (na hernoemen van de repo, zie onder):** `https://cschoorl.github.io/back-to-being/`
 
 ---
@@ -54,15 +73,18 @@ python3 -m http.server 4173
 | Klik op dot | Spring naar slide |
 | Swipe (mobiel) | Vorige / volgende |
 
-## Slide-structuur
+## Slide-structuur (nieuwe versies — 8 slides)
 
 1. **Cover** (*The World as our Office*)
-2. **Wat is dit?** Project in één zin + intro (lede)
-3. **Het plan** (*Lopen. Bouwen. Doneren*) in drie stappen
+2. **Wat is dit?** Project in één zin + intro (MIND akkoord, scope samen bepaald)
+3. **Het plan** (*Lopen. Bouwen. Overdragen.*) in drie stappen
 4. **Waarom** (filosofie: kantoor naar buiten)
-5. **Het doel** €20.000 ophalen + waar het naartoe gaat
-6. **Word partner** wat je terugkrijgt + CTA
-7. **Contact** Laten we koffie drinken (mail + optioneel telefoon)
+5. **Het doel** projectfinanciering + budget per post (mét-bedragen) of kostencategorieën (zonder-bedragen)
+6. **Sponsorpakketten** drie tiers: Hoofdsponsor / Co-sponsor / Supporter (in natura). Geen limiet op aantal partners.
+7. **Word partner** wat je terugkrijgt + CTA
+8. **Contact** Laten we koffie drinken (mail + optioneel telefoon)
+
+Het originele `index.html` heeft 7 slides (geen sponsortiers slide).
 
 ## Exporteren naar PDF
 
@@ -83,14 +105,16 @@ De print-styling zorgt dat elke slide op zijn eigen pagina komt zonder navigatie
 
 ```
 .
-├── index.html      # Het deck: slides, styling en navigatie-script
-├── README.md       # Dit bestand
+├── index.html              # Origineel deck (7 slides)
+├── met-bedragen.html       # Nieuw — 8 slides, mét bedragen + progressbar
+├── zonder-bedragen.html    # Nieuw — 8 slides, zonder bedragen
+├── README.md               # Dit bestand
 └── .gitignore
 ```
 
 ## Aanpassen
 
-- **Inhoud / copy:** alles in `index.html` tussen de `<section class="slide …">` tags
+- **Inhoud / copy:** alles in de HTML-bestanden tussen de `<section class="slide …">` tags
 - **Kleuren:** bovenin het `<style>` blok onder `:root` (o.a. `--green`, `--bg`, `--bg-dark`)
 - **Typografie:** [Fraunces](https://fonts.google.com/specimen/Fraunces) voor koppen, [Inter](https://fonts.google.com/specimen/Inter) voor body (Google Fonts)
 - **Stijl-inspiratie:** [House of Founders](https://houseoffounders.com): warme grijze achtergrond, serif met groen accent, pill tags
@@ -151,4 +175,4 @@ Pure HTML + CSS + vanilla JS. Geen build step, geen dependencies, geen tracking.
 
 Caesar.schoorl@gmail.com
 
-Telefoon op slide 7 wordt uit het script gevuld (`CONTACT_PHONE_*` onderaan `index.html`). Nu: +31 6 83032377.
+Telefoon op slide 8 wordt uit het script gevuld (`CONTACT_PHONE_*` onderaan `index.html`). Nu: +31 6 83032377.
