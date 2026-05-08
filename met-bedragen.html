@@ -30,7 +30,7 @@
       height: 100%;
       width: 100%;
       background: #0a0a0a;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       color: var(--ink);
       overflow: hidden;
       -webkit-font-smoothing: antialiased;
@@ -48,7 +48,7 @@
       inset: 0;
       display: flex;
       flex-direction: column;
-      padding: 8vh 9vw;
+      padding: 7vh 9vw 12vh;
       opacity: 0;
       transform: translateY(12px);
       transition: opacity 0.55s ease, transform 0.55s ease;
@@ -68,14 +68,14 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 6vh;
+      margin-bottom: 4vh;
     }
 
     .logo {
       display: flex;
       align-items: center;
       gap: 0.65rem;
-      font-family: 'Fraunces', serif;
+      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
       font-weight: 500;
       font-size: 0.95rem;
       letter-spacing: 0.02em;
@@ -118,22 +118,22 @@
       text-transform: uppercase;
       background: transparent;
       align-self: flex-start;
-      margin-bottom: 2.5rem;
+      margin-bottom: 1.5rem;
     }
 
     .pill.dark { border-color: rgba(168, 201, 140, 0.4); color: var(--green-light); }
 
     /* ---------- Headlines ---------- */
     .headline {
-      font-family: 'Fraunces', serif;
+      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
       font-weight: 400;
       font-variation-settings: "opsz" 18, "SOFT" 30;
-      font-size: clamp(2.4rem, 4.8vw, 5rem);
+      font-size: clamp(2.2rem, 4.2vw, 4.4rem);
       line-height: 1.04;
       letter-spacing: -0.015em;
       color: var(--ink);
       max-width: 22ch;
-      margin-bottom: 2rem;
+      margin-bottom: 1.25rem;
     }
 
     .headline em {
@@ -149,10 +149,10 @@
       font-family: 'Inter', sans-serif;
       font-weight: 400;
       font-size: clamp(1rem, 1.15vw, 1.15rem);
-      line-height: 1.6;
+      line-height: 1.55;
       color: var(--ink-soft);
       max-width: 56ch;
-      margin-bottom: 5vh;
+      margin-bottom: 3vh;
     }
 
     .slide.dark .lede { color: rgba(247, 245, 240, 0.7); }
@@ -163,7 +163,7 @@
     }
 
     .cover-headline {
-      font-family: 'Fraunces', serif;
+      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
       font-weight: 400;
       font-variation-settings: "opsz" 144, "SOFT" 30;
       font-size: clamp(3rem, 8.5vw, 9.5rem);
@@ -190,7 +190,7 @@
     }
 
     .cover-tagline {
-      font-family: 'Fraunces', serif;
+      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
       font-style: italic;
       font-weight: 300;
       font-size: clamp(1.05rem, 1.35vw, 1.35rem);
@@ -221,13 +221,13 @@
       display: grid;
       grid-template-columns: 60px 1fr auto;
       gap: 2.5rem;
-      padding: 1.5rem 0;
+      padding: 1.05rem 0;
       border-bottom: 1px solid var(--line);
       align-items: baseline;
     }
 
     .row .row-num {
-      font-family: 'Fraunces', serif;
+      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
       font-style: italic;
       font-weight: 400;
       font-size: 0.95rem;
@@ -236,7 +236,7 @@
     }
 
     .row .row-title {
-      font-family: 'Fraunces', serif;
+      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
       font-weight: 500;
       font-size: clamp(1.15rem, 1.5vw, 1.45rem);
       color: var(--ink);
@@ -249,6 +249,12 @@
       line-height: 1.5;
       max-width: 56ch;
       text-align: right;
+    }
+
+    .row .row-detail strong {
+      color: var(--green);
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
     }
 
     .row-tag {
@@ -267,6 +273,8 @@
       vertical-align: middle;
       transform: translateY(-2px);
     }
+
+    .rows-tight { margin-top: 0; }
 
     /* dark variant */
     .slide.dark .rows { border-top-color: var(--line-dark); }
@@ -289,13 +297,13 @@
       display: grid;
       grid-template-columns: 60px 1fr;
       gap: 2rem;
-      padding: 1.6rem 0;
+      padding: 1.15rem 0;
       border-bottom: 1px solid var(--line);
       align-items: baseline;
     }
 
     .vision-list .num {
-      font-family: 'Fraunces', serif;
+      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
       font-style: italic;
       font-weight: 400;
       font-size: 0.95rem;
@@ -304,7 +312,7 @@
     }
 
     .vision-list .text {
-      font-family: 'Fraunces', serif;
+      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
       font-style: italic;
       font-weight: 300;
       font-size: clamp(1.15rem, 1.55vw, 1.55rem);
@@ -319,16 +327,16 @@
       grid-template-columns: auto 1fr;
       gap: 4vw;
       align-items: center;
-      padding: 1vh 0 4vh;
+      padding: 0.5vh 0 2.5vh;
       border-bottom: 1px solid var(--line);
-      margin-bottom: 3vh;
+      margin-bottom: 2vh;
     }
 
     .goal-amount-clean {
-      font-family: 'Fraunces', serif;
+      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
       font-style: italic;
       font-weight: 400;
-      font-size: clamp(4rem, 9vw, 9rem);
+      font-size: clamp(3.5rem, 7.5vw, 7.5rem);
       color: var(--green);
       line-height: 0.9;
       letter-spacing: -0.02em;
@@ -344,7 +352,7 @@
     }
 
     .goal-side-clean p {
-      font-family: 'Fraunces', serif;
+      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
       font-style: italic;
       font-weight: 300;
       font-size: clamp(1.1rem, 1.45vw, 1.45rem);
@@ -357,6 +365,224 @@
       font-style: normal;
       font-weight: 500;
       color: var(--green);
+    }
+
+    .goal-progress {
+      margin: 0 0 2vh;
+    }
+
+    .goal-progress-bar {
+      height: 6px;
+      background: rgba(61, 90, 61, 0.12);
+      border-radius: 100px;
+      overflow: hidden;
+    }
+
+    .goal-progress-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--green);
+      border-radius: 100px;
+      transition: width 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .goal-progress-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-top: 0.65rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      color: var(--ink-soft);
+    }
+
+    .goal-progress-amount {
+      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--green);
+      font-size: 1rem;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .goal-progress-label {
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.7rem;
+    }
+
+    /* ---------- Sponsor tiers ---------- */
+    .tiers {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0;
+      margin-top: 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .tier {
+      padding: 1.5rem 1.5rem 1.25rem;
+      border-right: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    /* Tier slide: alleen lichte verticale spacing-tweaks, typografie blijft consistent */
+    .slide-tiers .topbar { margin-bottom: 3vh; }
+    .slide-tiers .lede { margin-bottom: 2vh; }
+    .slide-tiers .tier-spots { margin-bottom: 1rem; }
+    .slide-tiers .tier-perks li { padding: 0.5rem 0; }
+
+    /* Echt korte schermen (≤740px hoogte): tier-slide compacter */
+    @media (max-height: 740px) {
+      .slide-tiers .topbar { margin-bottom: 2vh; }
+      .slide-tiers .pill { margin-bottom: 0.85rem; }
+      .slide-tiers .headline {
+        font-size: clamp(1.6rem, 3vw, 2.8rem);
+        margin-bottom: 0.6rem;
+      }
+      .slide-tiers .lede {
+        margin-bottom: 1.25vh;
+        font-size: 0.92rem;
+        line-height: 1.45;
+      }
+      .slide-tiers .tier { padding: 1rem 1.1rem 0.85rem; }
+      .slide-tiers .tier-tag { margin-bottom: 0.55rem; }
+      .slide-tiers .tier-amount {
+        font-size: clamp(1.5rem, 2.4vw, 2.2rem);
+        margin-bottom: 0.25rem;
+      }
+      .slide-tiers .tier-spots {
+        font-size: 0.85rem;
+        margin-bottom: 0.65rem;
+      }
+      .slide-tiers .tier-examples {
+        padding: 0.4rem 0.55rem;
+        margin-bottom: 0.55rem;
+        font-size: 0.78rem;
+        line-height: 1.4;
+      }
+      .slide-tiers .tier-perks li {
+        padding: 0.35rem 0;
+        font-size: 0.82rem;
+        line-height: 1.4;
+      }
+      .slide-tiers .tier-featured {
+        top: 0.55rem;
+        right: 0.55rem;
+        font-size: 0.55rem;
+        padding: 0.12rem 0.4rem;
+      }
+    }
+
+    .tier:first-child { padding-left: 0; }
+    .tier:last-child { padding-right: 0; border-right: none; }
+
+    .tier-main {
+      background: rgba(168, 201, 140, 0.10);
+    }
+
+    .tier-featured {
+      position: absolute;
+      top: 0.9rem;
+      right: 0.9rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--green);
+      padding: 0.18rem 0.55rem;
+      border: 1px solid var(--green);
+      border-radius: 100px;
+    }
+
+    .tier-tag {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin-bottom: 0.9rem;
+    }
+
+    .tier-main .tier-tag { color: var(--green); }
+
+    .tier-amount {
+      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(2rem, 3.4vw, 3.4rem);
+      color: var(--ink);
+      line-height: 1;
+      margin-bottom: 0.4rem;
+      letter-spacing: -0.01em;
+    }
+
+    .tier-main .tier-amount { color: var(--green); }
+
+    .tier-spots {
+      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 0.95rem;
+      color: var(--ink-soft);
+      margin-bottom: 1.5rem;
+    }
+
+    .tier-examples {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(0.76rem, 0.84vw, 0.84rem);
+      color: var(--ink-soft);
+      line-height: 1.5;
+      padding: 0.5rem 0.65rem;
+      margin-bottom: 0.85rem;
+      background: rgba(61, 90, 61, 0.06);
+      border-left: 2px solid var(--green);
+    }
+
+    .tier-examples em {
+      font-style: normal;
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    .tier-examples strong {
+      font-weight: 500;
+      color: var(--green);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 0.65rem;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .tier-perks {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .tier-perks li {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(0.82rem, 0.92vw, 0.92rem);
+      color: var(--ink);
+      line-height: 1.5;
+      padding: 0.6rem 0;
+      border-top: 1px solid var(--line);
+      display: flex;
+      gap: 0.55rem;
+    }
+
+    .tier-perks li:first-child { border-top: none; padding-top: 0; }
+
+    .tier-perks li::before {
+      content: "→";
+      color: var(--green);
+      flex-shrink: 0;
     }
 
     /* ---------- Slide 6 (dark CTA) ---------- */
@@ -373,14 +599,14 @@
       margin-top: auto;
       display: grid;
       grid-template-columns: 1fr auto;
-      gap: 3rem;
+      gap: 2rem;
       align-items: center;
-      padding-top: 3vh;
+      padding-top: 2vh;
       border-top: 1px solid var(--line);
     }
 
     .cta-text {
-      font-family: 'Fraunces', serif;
+      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
       font-style: italic;
       font-weight: 300;
       font-size: clamp(1.15rem, 1.45vw, 1.45rem);
@@ -426,7 +652,7 @@
     .cta-button .arrow { font-size: 1rem; }
 
     .signature {
-      font-family: 'Fraunces', serif;
+      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
       font-style: italic;
       font-weight: 300;
       font-size: 0.85rem;
@@ -452,7 +678,7 @@
     }
 
     .closer-title {
-      font-family: 'Fraunces', serif;
+      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
       font-weight: 400;
       font-variation-settings: "opsz" 144, "SOFT" 30;
       font-size: clamp(3rem, 8vw, 8.5rem);
@@ -514,6 +740,25 @@
       text-decoration: underline;
     }
 
+    .closer-signoff {
+      width: 100%;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--line);
+      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(1.05rem, 1.3vw, 1.3rem);
+      color: var(--ink-soft);
+      line-height: 1.5;
+    }
+
+    .closer-signoff strong {
+      font-style: normal;
+      font-weight: 500;
+      color: var(--ink);
+    }
+
     /* ---------- Navigation ---------- */
     .nav {
       position: fixed;
@@ -529,6 +774,29 @@
       border-radius: 100px;
       border: 1px solid rgba(247, 245, 240, 0.15);
       z-index: 100;
+      opacity: 1;
+      transition: opacity 0.4s ease;
+    }
+
+    .nav.idle {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Keyboard focus indicator */
+    button:focus-visible,
+    a:focus-visible {
+      outline: 2px solid var(--green);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+    .slide.dark a:focus-visible,
+    .slide.dark button:focus-visible {
+      outline-color: var(--green-light);
+    }
+    .nav button:focus-visible,
+    .dot:focus-visible {
+      outline-color: var(--cream);
     }
 
     .nav button {
@@ -577,7 +845,16 @@
       .row .row-detail { grid-column: 2; text-align: left; }
       .goal-hero-clean { grid-template-columns: 1fr; gap: 1rem; }
       .cta-block { grid-template-columns: 1fr; gap: 1.5rem; }
-      .slide { padding: 5vh 6vw; }
+      .slide { padding: 5vh 6vw 10vh; }
+      .tiers { grid-template-columns: 1fr; }
+      .tier {
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+        padding: 1.5rem 0;
+      }
+      .tier:first-child { padding-top: 1.5rem; }
+      .tier:last-child { border-bottom: none; }
+      .tier-featured { top: 1.5rem; right: 0; }
     }
   </style>
 </head>
@@ -623,7 +900,7 @@
         </div>
         <div class="topbar-right">
           <span>Wat is dit?</span>
-          <span>02 / 07</span>
+          <span>02 / 08</span>
         </div>
       </div>
 
@@ -638,7 +915,8 @@
       <p class="lede">
         Wij zijn 3 AI-founders uit Amsterdam. Deze zomer lopen we de
         Camino van Tui naar Santiago. Onderweg bouwen we live een
-        AI-tool die we daarna gratis weggeven aan stichting MIND.
+        AI-tool die we overdragen aan stichting MIND — voor intern,
+        extern of hun eigen gebruikers, dat bepalen we samen met hen.
       </p>
     </section>
 
@@ -651,34 +929,34 @@
         </div>
         <div class="topbar-right">
           <span>Het plan</span>
-          <span>03 / 07</span>
+          <span>03 / 08</span>
         </div>
       </div>
 
       <span class="pill">Het plan</span>
 
       <h1 class="headline">
-        Lopen. Bouwen. <em>Doneren.</em>
+        Lopen. Bouwen. <em>Overdragen.</em>
       </h1>
 
       <p class="lede">
-        Drie simpele stappen. Geen kantoor, geen powerpoint. Gewoon doen.
+        Drie simpele stappen. Geen kantoor, geen vergaderzaal. Wel ritme, reflectie en zichtbaar bouwen.
       </p>
 
       <div class="rows">
         <div class="row">
           <span class="row-num">01</span>
           <span class="row-title">We lopen.</span>
-          <span class="row-detail">115 km in 6 dagen, Tui naar Santiago, één rugzak.</span>
+          <span class="row-detail">115 km in 6 dagen, Tui naar Santiago, 3 rugzakken.</span>
         </div>
         <div class="row">
           <span class="row-num">02</span>
           <span class="row-title">We bouwen onderweg.</span>
-          <span class="row-detail">AI-tool live, spraak en smart glasses, camera's draaien mee.</span>
+          <span class="row-detail">Live aan de AI-tool werken — handsfree via spraak en smart glasses, camera's leggen het proces vast.</span>
         </div>
         <div class="row">
           <span class="row-num">03</span>
-          <span class="row-title">We doneren.</span>
+          <span class="row-title">We dragen het over.</span>
           <span class="row-detail">Tool gratis naar MIND, plus een mini-docu.</span>
         </div>
       </div>
@@ -693,7 +971,7 @@
         </div>
         <div class="topbar-right">
           <span>Waarom</span>
-          <span>04 / 07</span>
+          <span>04 / 08</span>
         </div>
       </div>
 
@@ -739,53 +1017,128 @@
         </div>
         <div class="topbar-right">
           <span>Het doel</span>
-          <span>05 / 07</span>
+          <span>05 / 08</span>
         </div>
       </div>
 
       <span class="pill">Het doel</span>
 
       <h1 class="headline">
-        Help ons <em>€20k</em> op te halen.
+        <em>€20.000</em> voor productie en overdracht.
       </h1>
 
       <div class="goal-hero-clean">
         <div class="goal-amount-clean">€20.000</div>
         <div class="goal-side-clean">
-          <div class="label">Alle beetjes helpen</div>
+          <div class="label">Projectfinanciering</div>
           <p>
-            Met z'n drieën halen we dit op om alles mogelijk te maken.
-            <strong>Elk bedrag telt</strong>. Samen doen we het.
+            Geen donatiepot — <strong>projectfinanciering</strong> met zichtbare partnerwaarde. Dekt de Camino-productie, de bouw van de AI-tool en de overdracht aan MIND.
           </p>
         </div>
       </div>
 
-      <div class="rows" style="margin-top:0;">
+      <div class="goal-progress" aria-label="Voortgang projectfinanciering">
+        <div class="goal-progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="20000">
+          <div class="goal-progress-fill"></div>
+        </div>
+        <div class="goal-progress-meta">
+          <span class="goal-progress-amount">€0</span>
+          <span class="goal-progress-label">reeds toegezegd · 0%</span>
+        </div>
+      </div>
+
+      <div class="rows rows-tight">
         <div class="row">
           <span class="row-num">01</span>
-          <span class="row-title">Reis &amp; verblijf</span>
-          <span class="row-detail">3 founders + crew, 6 dagen on the road.</span>
+          <span class="row-title">Productie mini-docu</span>
+          <span class="row-detail"><strong>± €7.500</strong> &nbsp;&middot;&nbsp; Camera, edit, muziek, kleurcorrectie.</span>
         </div>
         <div class="row">
           <span class="row-num">02</span>
-          <span class="row-title">Productie mini-docu</span>
-          <span class="row-detail">Camera, edit, muziek, kleurcorrectie.</span>
+          <span class="row-title">Tech &amp; AI</span>
+          <span class="row-detail"><strong>± €5.000</strong> &nbsp;&middot;&nbsp; Hardware, AI-credits, software, microfoons.</span>
         </div>
         <div class="row">
           <span class="row-num">03</span>
-          <span class="row-title">Tech &amp; AI</span>
-          <span class="row-detail">Smart glasses, AI-credits, software, microfoons.</span>
+          <span class="row-title">Reis &amp; verblijf</span>
+          <span class="row-detail"><strong>± €5.000</strong> &nbsp;&middot;&nbsp; 3 founders + crew, 6 dagen on the road.</span>
         </div>
         <div class="row">
           <span class="row-num">04</span>
           <span class="row-title">Kleding &amp; uitrusting</span>
-          <span class="row-detail">Schoeisel, rugzak, gear, zichtbaar in beeld.</span>
+          <span class="row-detail"><strong>± €2.500</strong> &nbsp;&middot;&nbsp; Schoeisel, rugzakken, gear, zichtbaar in beeld.</span>
         </div>
       </div>
     </section>
 
-    <!-- ============ SLIDE 6: PARTNER WORDEN ============ -->
-    <section class="slide" data-index="5">
+    <!-- ============ SLIDE 6: SPONSORTIERS ============ -->
+    <section class="slide slide-tiers" data-index="5">
+      <div class="topbar">
+        <div class="logo">
+          <span class="logo-mark">B</span>
+          Back to Being
+        </div>
+        <div class="topbar-right">
+          <span>Sponsorpakketten</span>
+          <span>06 / 08</span>
+        </div>
+      </div>
+
+      <span class="pill">Sponsorpakketten</span>
+
+      <h1 class="headline">
+        Drie manieren om <em>mee te lopen.</em>
+      </h1>
+
+      <p class="lede">
+        Kies het pakket dat past. Cash of in natura, hoe meer partners hoe beter. Alles boven de €20.000 maakt de impact groter.
+      </p>
+
+      <div class="tiers">
+        <div class="tier tier-main">
+          <span class="tier-featured">Meest impact</span>
+          <span class="tier-tag">Hoofdsponsor</span>
+          <div class="tier-amount">€10.000</div>
+          <div class="tier-spots">Volledig pakket</div>
+          <ul class="tier-perks">
+            <li>Naam in titel mini-docu ("presented by")</li>
+            <li>Walking workshop + AI session bij jouw team</li>
+            <li>Custom content pakket: beelden, quotes, edits</li>
+            <li>Merkvermelding in earned media campagne</li>
+            <li>Spreker bij debrief event na de Camino</li>
+          </ul>
+        </div>
+        <div class="tier">
+          <span class="tier-tag">Co-sponsor</span>
+          <div class="tier-amount">€3.500</div>
+          <div class="tier-spots">Verbonden aan het verhaal</div>
+          <ul class="tier-perks">
+            <li>Logo en vermelding in mini-docu</li>
+            <li>Plek bij gezamenlijke walking workshop</li>
+            <li>Gedeeld content pakket voor eigen kanalen</li>
+            <li>Co-vermelding in earned media</li>
+          </ul>
+        </div>
+        <div class="tier">
+          <span class="tier-tag">Supporter</span>
+          <div class="tier-amount">In natura</div>
+          <div class="tier-spots">Goederen of diensten</div>
+          <div class="tier-examples">
+            <strong>Denk aan</strong>
+            Hardware (<em>MacBooks, smart glasses</em>), AI-credits, gear, verblijf. <em>Substantiële bijdragen krijgen co- of hoofdsponsor perks.</em>
+          </div>
+          <ul class="tier-perks">
+            <li>Product zichtbaar in beeld waar passend</li>
+            <li>Vermelding in aftiteling mini-docu</li>
+            <li>Eerste toegang tot docu en updates</li>
+            <li>Vermelding in updates en social content</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SLIDE 7: PARTNER WORDEN ============ -->
+    <section class="slide" data-index="6">
       <div class="topbar">
         <div class="logo">
           <span class="logo-mark">B</span>
@@ -793,7 +1146,7 @@
         </div>
         <div class="topbar-right">
           <span>Word partner</span>
-          <span>06 / 07</span>
+          <span>07 / 08</span>
         </div>
       </div>
 
@@ -812,23 +1165,23 @@
       <div class="rows">
         <div class="row">
           <span class="row-num">01</span>
-          <span class="row-title">Naam &amp; merk in de mini-docu</span>
-          <span class="row-detail">Prominent verbonden aan een verhaal dat blijft hangen.</span>
-        </div>
-        <div class="row">
-          <span class="row-num">02</span>
           <span class="row-title">Het kantoor naar buiten voor jouw team <span class="row-tag">uniek</span></span>
           <span class="row-detail">Walking workshop + AI session bij jullie. Wij brengen Back to Being naar je bedrijf.</span>
         </div>
         <div class="row">
+          <span class="row-num">02</span>
+          <span class="row-title">Mini-docu met merkvermelding</span>
+          <span class="row-detail">Distributie via TikTok, Instagram en YouTube. Prominent verbonden aan een verhaal dat blijft hangen.</span>
+        </div>
+        <div class="row">
           <span class="row-num">03</span>
-          <span class="row-title">Content voor jouw kanalen</span>
-          <span class="row-detail">Beelden, quotes en updates, klaar om te delen.</span>
+          <span class="row-title">Earned media</span>
+          <span class="row-detail">We pitchen het verhaal actief richting podcasts, kranten en eigen netwerk. Jouw merk reist mee.</span>
         </div>
         <div class="row">
           <span class="row-num">04</span>
-          <span class="row-title">Earned media</span>
-          <span class="row-detail">Serieuze exposure naar een groot netwerk: kranten, podcasts, RTL Z en meer. Jouw merk gaat mee in elk verhaal.</span>
+          <span class="row-title">Content voor jouw kanalen</span>
+          <span class="row-detail">Beelden, quotes en updates, klaar om te delen op je eigen socials.</span>
         </div>
       </div>
 
@@ -838,15 +1191,15 @@
           heldere vervolgstap. Contact staat op de volgende slide.
         </p>
         <div>
-          <a class="cta-button" href="#" id="cta-next-contact">
+          <button class="cta-button" type="button" id="cta-next-contact">
             Volgende slide <span class="arrow">→</span>
-          </a>
+          </button>
         </div>
       </div>
     </section>
 
-    <!-- ============ SLIDE 7: CLOSER ============ -->
-    <section class="slide closer" data-index="6">
+    <!-- ============ SLIDE 8: CLOSER ============ -->
+    <section class="slide closer" data-index="7">
       <div class="topbar">
         <div class="logo">
           <span class="logo-mark">B</span>
@@ -854,7 +1207,7 @@
         </div>
         <div class="topbar-right">
           <span>Contact</span>
-          <span>07 / 07</span>
+          <span>08 / 08</span>
         </div>
       </div>
 
@@ -881,6 +1234,10 @@
               href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being%3A%2010%20min%20koffie">Caesar.schoorl@gmail.com</a>
           </p>
         </div>
+
+        <p class="closer-signoff">
+          <strong>De wereld als ons kantoor</strong> — we zien je onderweg. Zomer 2026.
+        </p>
       </div>
     </section>
 
@@ -905,21 +1262,31 @@
       const CONTACT_PHONE_E164_DIGITS = '31683032377';
       const CONTACT_PHONE_SHOW = '+31 6 83032377';
 
-      slides.forEach((_, i) => {
+      // Live update voor pitch — pas aan voor het gesprek
+      const SECURED_AMOUNT = 0;     // EUR reeds toegezegd
+      const TARGET_AMOUNT  = 20000; // EUR doel
+
+      slides.forEach((slide, i) => {
         const dot = document.createElement('button');
         dot.className = 'dot' + (i === 0 ? ' active' : '');
         dot.setAttribute('aria-label', `Ga naar slide ${i + 1}`);
+        if (i === 0) dot.setAttribute('aria-current', 'true');
         dot.addEventListener('click', () => go(i));
         dotsContainer.appendChild(dot);
+        slide.setAttribute('aria-hidden', i === 0 ? 'false' : 'true');
       });
 
       function go(i) {
         if (i < 0 || i >= total) return;
         slides[current].classList.remove('active');
+        slides[current].setAttribute('aria-hidden', 'true');
         dotsContainer.children[current].classList.remove('active');
+        dotsContainer.children[current].removeAttribute('aria-current');
         current = i;
         slides[current].classList.add('active');
+        slides[current].setAttribute('aria-hidden', 'false');
         dotsContainer.children[current].classList.add('active');
+        dotsContainer.children[current].setAttribute('aria-current', 'true');
         prevBtn.disabled = current === 0;
         nextBtn.disabled = current === total - 1;
       }
@@ -928,7 +1295,10 @@
       nextBtn.addEventListener('click', () => go(current + 1));
 
       document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); go(current + 1); }
+        const tag = (e.target && e.target.tagName) || '';
+        const isInteractive = tag === 'A' || tag === 'BUTTON' || tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT';
+        if (e.key === 'ArrowRight' || e.key === 'PageDown') { e.preventDefault(); go(current + 1); }
+        else if (e.key === ' ' && !isInteractive) { e.preventDefault(); go(current + 1); }
         else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); go(current - 1); }
         else if (e.key === 'Home') { go(0); }
         else if (e.key === 'End') { go(total - 1); }
@@ -958,6 +1328,22 @@
         }
       })();
 
+      (function applyProgress() {
+        var fill = document.querySelector('.goal-progress-fill');
+        var amount = document.querySelector('.goal-progress-amount');
+        var label = document.querySelector('.goal-progress-label');
+        var bar = document.querySelector('.goal-progress-bar');
+        if (!fill || !amount || !label || !bar) return;
+        var pct = Math.max(0, Math.min(100, Math.round((SECURED_AMOUNT / TARGET_AMOUNT) * 100)));
+        var formatted = '€' + Number(SECURED_AMOUNT).toLocaleString('nl-NL');
+        amount.textContent = formatted;
+        label.textContent = 'reeds toegezegd · ' + pct + '%';
+        bar.setAttribute('aria-valuenow', String(SECURED_AMOUNT));
+        bar.setAttribute('aria-valuemax', String(TARGET_AMOUNT));
+        // Triggert na 1 frame zodat transitie zichtbaar is
+        requestAnimationFrame(function () { fill.style.width = pct + '%'; });
+      })();
+
       var nextContactBtn = document.getElementById('cta-next-contact');
       if (nextContactBtn) {
         nextContactBtn.addEventListener('click', function (ev) {
@@ -965,6 +1351,22 @@
           go(total - 1);
         });
       }
+
+      // Auto-hide navigation pill after 1s of inactivity
+      var navEl = document.querySelector('.nav');
+      var idleTimer = null;
+      function showNav() {
+        if (!navEl) return;
+        navEl.classList.remove('idle');
+        clearTimeout(idleTimer);
+        idleTimer = setTimeout(function () {
+          navEl.classList.add('idle');
+        }, 1000);
+      }
+      ['mousemove', 'keydown', 'touchstart', 'click', 'wheel'].forEach(function (ev) {
+        document.addEventListener(ev, showNav, { passive: true });
+      });
+      showNav();
     })();
   </script>
 </body>
