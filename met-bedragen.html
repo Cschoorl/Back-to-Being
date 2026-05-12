@@ -527,6 +527,11 @@
         font-size: 0.82rem;
         line-height: 1.4;
       }
+      .slide-tiers .tier-narrative p {
+        font-size: 0.78rem;
+        line-height: 1.38;
+        padding: 0.32rem 0 0;
+      }
       .slide-tiers .tier-featured {
         top: 0.55rem;
         right: 0.55rem;
@@ -641,6 +646,31 @@
       content: "→";
       color: var(--green);
       flex-shrink: 0;
+    }
+
+    .tier-narrative {
+      margin: 0;
+      padding: 0;
+      flex: 1;
+    }
+
+    .tier-narrative p {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(0.78rem, 0.86vw, 0.88rem);
+      color: var(--ink);
+      line-height: 1.55;
+      margin: 0;
+      padding: 0.55rem 0 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .tier-narrative p:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .slide-vervolg .story-frame {
+      margin-top: 1.5vh;
     }
 
     /* ---------- Slide 6 (dark CTA) ---------- */
@@ -956,18 +986,27 @@
       </div>
 
       <h1 class="headline">
-        Eén pelgrimstocht.<br />
-        Eén live bouwproces.<br />
-        Eén overdracht aan <em>MIND.</em>
+        Eén pelgrimstocht, één live bouwproces, één overdracht aan <em>MIND.</em>
       </h1>
 
-      <p class="lede">
-        Wij zijn drie AI-nerds uit Amsterdam, ook founders, maar vooral
-        mensen die liever bouwen dan slides maken. Deze zomer lopen we de
-        Camino van Tui naar Santiago en bouwen onderweg live aan één
-        AI-tool voor mentale gezondheid. Daarna dragen we die over aan
-        stichting MIND. Sponsors maken reis, productie en overdracht mogelijk.
-      </p>
+      <div class="story-frame">
+        <p>
+          Wij zijn drie AI nerds uit Amsterdam, ook founders, maar vooral
+          mensen die liever bouwen dan slides maken. Deze zomer lopen we de
+          Camino van Tui naar Santiago en bouwen onderweg live aan één
+          AI tool voor mentale gezondheid. Daarna dragen we die over aan
+          stichting MIND. Sponsors maken reis, productie en overdracht voor
+          ons mogelijk.
+        </p>
+        <p>
+          De tool die we onderweg bouwen, dragen we gratis over aan MIND.
+          Wat het precies wordt, bepalen we samen met hen. Hun behoefte is
+          leidend en ons werk is om iets bruikbaars te bouwen. Zo blijft het
+          verhaal concreet, met een route, een proces in de open lucht en een
+          eindproduct dat terechtkomt bij een organisatie die werkt aan
+          mentale gezondheid.
+        </p>
+      </div>
     </section>
 
     <!-- ============ SLIDE 3: WAAROM (verhaal) ============ -->
@@ -992,21 +1031,19 @@
 
       <div class="story-frame">
         <p>
-          Niet bouwen vanachter een bureau, maar lopend, reflecterend,
-          in beweging. We laten zien dat tech ons juist <strong>menselijker</strong>
+          Niet bouwen vanachter een bureau, maar lopend, reflecterend en in
+          beweging. We laten zien dat tech ons juist <strong>menselijker</strong>
           kan maken, als je hem op de goede manier inzet.
         </p>
         <p>
           De werkweek voelt voor veel mensen sneller digitaal dan menselijk,
           terwijl AI juist ruimte zou moeten geven voor wie we zijn. Mentale
-          gezondheid raakt iedereen; wij willen laten zien dat je technologie
-          daar nuchter én warm bij kunt laten aansluiten.
-        </p>
-        <p>
-          Voor ons schuift beweging ruis opzij: lopen is scherp denken,
-          en scherp denken is bouwen. Een mini-docu vangt daarna de spanning
-          tussen zweet en software, voor MIND, voor het publiek, en voor
-          partners die het aandurven om mee te financieren.
+          gezondheid raakt iedereen en wij willen laten zien dat je technologie
+          daar nuchter én warm bij kunt laten aansluiten. Voor ons schuift
+          beweging ruis opzij. Lopen is scherp denken en scherp denken is
+          bouwen. Een mini-docu vangt daarna de spanning tussen zweet en
+          software, voor MIND, voor het publiek en voor partners die het
+          aandurven om mee te financieren.
         </p>
       </div>
     </section>
@@ -1035,34 +1072,32 @@
         <div class="goal-side-clean">
           <div class="label">Projectfinanciering</div>
           <p>
-            Dit is geen donatiepot: het is budget om het verhaal écht goed
-            te doen. <strong>Zo zetten we het in.</strong>
+            Dit is geen donatiepot maar budget om het verhaal echt goed te
+            doen, met zichtbare partnerwaarde. <strong>Zo zetten we het in.</strong>
           </p>
         </div>
       </div>
 
       <div class="goal-story-wrap story-frame">
         <p>
-          We gebruiken het voor de <strong>mini-docu</strong>, zodat het pad,
-          het bouwen en de overdracht aan MIND ook na de hike blijven leven
-          op beeld.
+          We willen dertigduizend euro bij elkaar brengen. Dat geld zetten we
+          in zodat het pad, het bouwen en de overdracht aan MIND ook na de
+          hike blijven leven op beeld, met ruimte voor een sterke mini-docu.
         </p>
         <p>
-          We gebruiken het voor <strong>tech en AI</strong>: hardware,
-          credits en software zodat we onderweg betrouwbaar kunnen werken
-          met spraak, smart glasses en audio die mee kan in het landschap.
-        </p>
-        <p>
-          We gebruiken het voor <strong>reis en verblijf</strong>: zes dagen
-          voor drie AI-nerds plus crew, veilig en productief onderweg.
-        </p>
-        <p>
-          We gebruiken het voor <strong>kleding en uitrusting</strong> die
-          in beeld moet en mag: schoeisel, rugzakken, gear die het verhaal
-          eer aandoet.
+          We investeren in <strong>tech en AI</strong>, met hardware, credits
+          en software zodat we onderweg betrouwbaar kunnen werken met spraak,
+          smart glasses en audio die meegaat in het landschap. We dekken
+          <strong>reis en verblijf</strong> voor zes dagen met drie AI nerds
+          plus crew, veilig en productief onderweg. We besteden aan
+          <strong>kleding en uitrusting</strong> die in beeld moet en mag,
+          met schoeisel en rugzakken en gear dat het verhaal eer aandoet.
         </p>
         <p class="goal-inset-note goal-inset-note--flat">
-          Indicatief verdeeld: docu <strong>± €11.500</strong> · tech <strong>± €7.500</strong> · reis <strong>± €7.500</strong> · gear <strong>± €3.500</strong>.
+          Ter verduidelijking denken we ongeveer elfduizend vijfhonderd euro
+          voor de docu, ongeveer zevenduizend vijfhonderd voor tech, hetzelfde
+          bedrag voor reis en verblijf, en ongeveer drieduizend vijfhonderd
+          voor uitrusting.
         </p>
       </div>
 
@@ -1072,7 +1107,7 @@
         </div>
         <div class="goal-progress-meta">
           <span class="goal-progress-amount">€0</span>
-          <span class="goal-progress-label">reeds toegezegd · 0%</span>
+          <span class="goal-progress-label">reeds toegezegd, 0%</span>
         </div>
       </div>
     </section>
@@ -1103,9 +1138,9 @@
         manier die bij het verhaal hoort, niet als los logo. We maken
         content waarin zichtbaar wordt hoe jullie deze journey mogelijk
         hebben gemaakt, klaar voor jullie kanalen. Daarnaast gaan we samen
-        het gesprek openen over wat jullie nog meer terug willen zien:
-        we denken graag mee over maatwerk waar dat logisch is. Hieronder
-        drie instappunten, in cash of in natura.
+        het gesprek openen over wat jullie nog meer terug willen zien en we
+        denken graag mee over maatwerk waar dat logisch is. Hieronder drie
+        manieren om in te stappen, in cash of in natura.
       </p>
 
       <div class="tiers">
@@ -1114,24 +1149,29 @@
           <span class="tier-tag">Hoofdsponsor</span>
           <div class="tier-amount">€15.000</div>
           <div class="tier-spots">Volledig pakket</div>
-          <ul class="tier-perks">
-            <li>Naam in titel mini-docu ("presented by")</li>
-            <li>Walking workshop + AI session bij jouw team</li>
-            <li>Custom content pakket: beelden, quotes, edits</li>
-            <li>Merkvermelding in earned media campagne</li>
-            <li>Spreker bij debrief event na de Camino</li>
-          </ul>
+          <div class="tier-narrative">
+            <p>
+              Als hoofdsponsor sta je met je naam in de titel van de
+              mini-docu, presented by. We komen naar je organisatie voor een
+              walking workshop en een AI sessie. Je krijgt een custom pakket
+              met beelden, quotes en bewerkingen voor je eigen kanalen. Je
+              merk gaat mee in onze earned media aanpak en je bent welkom als
+              spreker bij het debrief moment na de Camino.
+            </p>
+          </div>
         </div>
         <div class="tier">
-          <span class="tier-tag">Co-sponsor</span>
+          <span class="tier-tag">Co sponsor</span>
           <div class="tier-amount">€5.000</div>
           <div class="tier-spots">Verbonden aan het verhaal</div>
-          <ul class="tier-perks">
-            <li>Logo en vermelding in mini-docu</li>
-            <li>Plek bij gezamenlijke walking workshop</li>
-            <li>Gedeeld content pakket voor eigen kanalen</li>
-            <li>Co-vermelding in earned media</li>
-          </ul>
+          <div class="tier-narrative">
+            <p>
+              Als co sponsor krijg je logo en vermelding in de mini-docu, een
+              plek bij de gezamenlijke walking workshop, een gedeeld content
+              pakket voor je eigen kanalen en een gedeelde vermelding in earned
+              media.
+            </p>
+          </div>
         </div>
         <div class="tier">
           <span class="tier-tag">Supporter</span>
@@ -1139,20 +1179,23 @@
           <div class="tier-spots">Goederen of diensten</div>
           <div class="tier-examples">
             <strong>Denk aan</strong>
-            Hardware (<em>MacBooks, smart glasses</em>), AI-credits, gear, verblijf. <em>Substantiële bijdragen krijgen co- of hoofdsponsor perks.</em>
+            Hardware zoals MacBooks en smart glasses, AI credits, gear en
+            verblijf. Substantiële bijdragen schalen we mee naar co sponsor of
+            hoofdsponsor niveau.
           </div>
-          <ul class="tier-perks">
-            <li>Product zichtbaar in beeld waar passend</li>
-            <li>Vermelding in aftiteling mini-docu</li>
-            <li>Eerste toegang tot docu en updates</li>
-            <li>Vermelding in updates en social content</li>
-          </ul>
+          <div class="tier-narrative">
+            <p>
+              Je product is zichtbaar in beeld waar dat past, je staat in de
+              aftiteling van de mini-docu, je krijgt als eerste toegang tot
+              docu en updates, en je komt voor in updates en social content.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ============ SLIDE 6: VERVOLG ============ -->
-    <section class="slide" data-index="5">
+    <section class="slide slide-vervolg" data-index="5">
       <div class="topbar">
         <div class="logo">
           <span class="logo-mark">B</span>
@@ -1173,32 +1216,31 @@
 
       <p class="lede">
         We nemen een korte call om pakket, timing en content met elkaar te
-        verbinden. Geen eindeloze trajecten: we willen snel helderheid voor
-        jullie én voor ons team op het pad.
+        verbinden. Geen eindeloze trajecten. We willen snel helderheid voor
+        jullie en voor ons team op het pad.
       </p>
 
-      <div class="rows">
-        <div class="row">
-          <span class="row-num">01</span>
-          <span class="row-title">Het kantoor naar buiten <span class="row-tag">uniek</span></span>
-          <span class="row-detail">Walking workshop en AI-session bij jullie op locatie, als onderdeel van het partnership.</span>
-        </div>
-        <div class="row">
-          <span class="row-num">02</span>
-          <span class="row-title">Earned media &amp; zichtbaarheid</span>
-          <span class="row-detail">We blijven het verhaal actief uitdragen; jullie merk reist mee waar dat past bij het narratief.</span>
-        </div>
-        <div class="row">
-          <span class="row-num">03</span>
-          <span class="row-title">Debrief na de Camino</span>
-          <span class="row-detail">Een gezamenlijk moment om resultaat, docu en vervolg te delen met jullie stakeholders.</span>
-        </div>
+      <div class="story-frame">
+        <p>
+          Als onderdeel van het partnership brengen we het kantoor naar
+          buiten bij jullie, met een walking workshop en een AI sessie op
+          jullie locatie. Dat is iets wat je in deze vorm zelden ergens anders
+          boekt.
+        </p>
+        <p>
+          We blijven het verhaal actief uitdragen richting media en ons
+          netwerk en jullie merk reist mee waar dat past bij het narratief.
+        </p>
+        <p>
+          Na de Camino plannen we een gezamenlijk debrief moment om resultaat,
+          docu en vervolg te delen met jullie stakeholders.
+        </p>
       </div>
 
       <div class="cta-block">
         <p class="cta-text">
-          Volgende stap: <strong>10 minuten koffie</strong>. Kort gesprek,
-          heldere vervolgstap. Contact staat op de volgende slide.
+          Volgende stap is tien minuten koffie. Een kort gesprek en een heldere
+          vervolgstap. Contact staat op de volgende slide.
         </p>
         <div>
           <button class="cta-button" type="button" id="cta-next-contact">
@@ -1224,7 +1266,8 @@
       <div class="closer-body">
         <h1 class="closer-title">Laten we koffie drinken.</h1>
         <p class="closer-sub">
-          Stuur dit deck intern rond, of plan direct <strong>10 minuten</strong> met ons, wat voor jou het snelst helderheid geeft.
+          Stuur dit deck intern rond of plan direct tien minuten met ons,
+          wat voor jou het snelst helderheid geeft.
         </p>
 
         <!-- Telefoon staat ingesteld onderaan het script (CONTACT_PHONE_*) -->
@@ -1272,7 +1315,7 @@
       const CONTACT_PHONE_E164_DIGITS = '31683032377';
       const CONTACT_PHONE_SHOW = '+31 6 83032377';
 
-      // Live update voor pitch — pas aan voor het gesprek
+      // Live update voor pitch. Pas SECURED_AMOUNT aan vóór het gesprek.
       const SECURED_AMOUNT = 0;     // EUR reeds toegezegd
       const TARGET_AMOUNT  = 30000; // EUR doel
 
@@ -1347,7 +1390,7 @@
         var pct = Math.max(0, Math.min(100, Math.round((SECURED_AMOUNT / TARGET_AMOUNT) * 100)));
         var formatted = '€' + Number(SECURED_AMOUNT).toLocaleString('nl-NL');
         amount.textContent = formatted;
-        label.textContent = 'reeds toegezegd · ' + pct + '%';
+        label.textContent = 'reeds toegezegd, ' + pct + '%';
         bar.setAttribute('aria-valuenow', String(SECURED_AMOUNT));
         bar.setAttribute('aria-valuemax', String(TARGET_AMOUNT));
         // Triggert na 1 frame zodat transitie zichtbaar is
