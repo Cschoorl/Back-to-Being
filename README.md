@@ -106,8 +106,8 @@ git remote -v
 ## Aanpassen
 
 - **Copy / slides:** `<section class="slide …">` in de betreffende `.html`.  
-- **Kleuren:** `:root` in het `<style>`-blok.  
-- **Fonts:** [Fraunces](https://fonts.google.com/specimen/Fraunces), [Inter](https://fonts.google.com/specimen/Inter) (Google Fonts).
+- **Kleuren / merk:** `:root` in het `<style>`-blok (CANVAS, TREE, GRASS, SKY, CREEK, SAND, CHARCOAL).  
+- **Fonts:** [Instrument Serif](https://fonts.google.com/specimen/Instrument+Serif) (koppen), [Inter Tight](https://fonts.google.com/specimen/Inter+Tight) (labels/sub), [Inter](https://fonts.google.com/specimen/Inter) (body) — Google Fonts.
 
 ---
 

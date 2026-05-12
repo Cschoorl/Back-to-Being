@@ -7,21 +7,38 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap"
     rel="stylesheet"
   />
   <style>
+    /* Back to Being brand (CANVAS / TREE / GRASS / SKY / CREEK / SAND / CHARCOAL) */
     :root {
-      --bg:        #ebebe8;
-      --bg-dark:   #0d0d0d;
-      --ink:       #1a1a1a;
-      --ink-soft:  #6a6a64;
-      --line:      #cfcfca;
-      --line-dark: #2a2a28;
-      --green:     #3d5a3d;
-      --green-soft:#4f7050;
-      --green-light:#a8c98c;
-      --cream:     #f7f5f0;
+      --sand:      #B9A26E;
+      --tree:      #2A3723;
+      --grass:     #97A081;
+      --sky:       #A7BDD5;
+      --creek:     #424D69;
+      --canvas:    #FFFFF1;
+      --charcoal:  #161616;
+
+      --bg:         var(--canvas);
+      --bg-dark:    var(--tree);
+      --ink:        var(--charcoal);
+      --ink-soft:   #4d4d48;
+      --line:       rgba(42, 55, 35, 0.14);
+      --line-dark:  rgba(167, 189, 213, 0.22);
+      --accent:     var(--creek);
+      --accent-2:   var(--grass);
+      --green:      var(--tree);
+      --green-soft: #1f2918;
+      --green-light: var(--grass);
+      --cream:      var(--canvas);
+
+      --font-head:   "Instrument Serif", Georgia, "Times New Roman", serif;
+      --font-sub:    "Inter Tight", "Inter", -apple-system, sans-serif;
+      --font-body:   "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --logo-mark-svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cg fill='none' stroke='%232A3723' stroke-width='3.2' stroke-linecap='round'%3E%3Cpath d='M20 34V12'/%3E%3Cpath d='M20 12 9 20'/%3E%3Cpath d='M20 12 31 20'/%3E%3Cpath d='M20 12 5 26'/%3E%3Cpath d='M20 12 35 26'/%3E%3C/g%3E%3C/svg%3E");
+      --logo-mark-svg-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cg fill='none' stroke='%23FFFFF1' stroke-width='3.2' stroke-linecap='round'%3E%3Cpath d='M20 34V12'/%3E%3Cpath d='M20 12 9 20'/%3E%3Cpath d='M20 12 31 20'/%3E%3Cpath d='M20 12 5 26'/%3E%3Cpath d='M20 12 35 26'/%3E%3C/g%3E%3C/svg%3E");
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -29,8 +46,8 @@
     html, body {
       height: 100%;
       width: 100%;
-      background: #0a0a0a;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--charcoal);
+      font-family: var(--font-body);
       color: var(--ink);
       overflow: hidden;
       -webkit-font-smoothing: antialiased;
@@ -75,31 +92,35 @@
       display: flex;
       align-items: center;
       gap: 0.65rem;
-      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+      font-family: var(--font-sub);
       font-weight: 500;
-      font-size: 0.95rem;
-      letter-spacing: 0.02em;
+      font-size: 0.88rem;
+      letter-spacing: 0.06em;
+      text-transform: lowercase;
       color: var(--ink);
     }
 
     .logo-mark {
-      width: 26px;
-      height: 26px;
-      border: 1.5px solid var(--ink);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.7rem;
-      font-weight: 600;
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+      border: none;
+      border-radius: 0;
+      background: var(--logo-mark-svg) center / contain no-repeat;
+    }
+
+    .slide.dark .logo-mark {
+      background-image: var(--logo-mark-svg-light);
     }
 
     .topbar-right {
       display: flex;
       align-items: center;
       gap: 1.5rem;
-      font-size: 0.75rem;
-      letter-spacing: 0.18em;
+      font-family: var(--font-sub);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
       color: var(--ink-soft);
     }
@@ -109,28 +130,39 @@
       display: inline-flex;
       align-items: center;
       padding: 0.45rem 1rem;
-      border: 1.5px solid var(--green);
-      color: var(--green);
+      border: 1.5px solid var(--grass);
+      color: var(--tree);
       border-radius: 100px;
-      font-size: 0.7rem;
-      font-weight: 500;
-      letter-spacing: 0.18em;
+      font-family: var(--font-sub);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
-      background: transparent;
+      background: rgba(151, 160, 129, 0.12);
       align-self: flex-start;
       margin-bottom: 1.5rem;
     }
 
-    .pill.dark { border-color: rgba(168, 201, 140, 0.4); color: var(--green-light); }
+    .pill::before {
+      content: "";
+      display: inline-block;
+      width: 0.55rem;
+      height: 0.4rem;
+      margin-right: 0.45rem;
+      background: var(--sand);
+      clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+      flex-shrink: 0;
+    }
+
+    .pill.dark { border-color: rgba(151, 160, 129, 0.45); color: var(--sky); background: rgba(22, 22, 22, 0.35); }
 
     /* ---------- Headlines ---------- */
     .headline {
-      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+      font-family: var(--font-head);
       font-weight: 400;
-      font-variation-settings: "opsz" 18, "SOFT" 30;
       font-size: clamp(2.2rem, 4.2vw, 4.4rem);
       line-height: 1.04;
-      letter-spacing: -0.015em;
+      letter-spacing: -0.02em;
       color: var(--ink);
       max-width: 22ch;
       margin-bottom: 1.25rem;
@@ -139,14 +171,14 @@
     .headline em {
       font-style: italic;
       font-weight: 400;
-      color: var(--green);
+      color: var(--creek);
     }
 
     .slide.dark .headline { color: var(--cream); }
-    .slide.dark .headline em { color: var(--green-light); }
+    .slide.dark .headline em { color: var(--sky); }
 
     .lede {
-      font-family: 'Inter', sans-serif;
+      font-family: var(--font-body);
       font-weight: 400;
       font-size: clamp(1rem, 1.15vw, 1.15rem);
       line-height: 1.55;
@@ -163,12 +195,11 @@
     }
 
     .cover-headline {
-      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+      font-family: var(--font-head);
       font-weight: 400;
-      font-variation-settings: "opsz" 144, "SOFT" 30;
       font-size: clamp(3rem, 8.5vw, 9.5rem);
       line-height: 0.95;
-      letter-spacing: -0.035em;
+      letter-spacing: -0.03em;
       color: var(--ink);
       margin: auto 0 0;
     }
@@ -176,7 +207,7 @@
     .cover-headline em {
       font-style: italic;
       font-weight: 400;
-      color: var(--green);
+      color: var(--creek);
     }
 
     .cover-foot {
@@ -190,9 +221,9 @@
     }
 
     .cover-tagline {
-      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+      font-family: var(--font-head);
       font-style: italic;
-      font-weight: 300;
+      font-weight: 400;
       font-size: clamp(1.05rem, 1.35vw, 1.35rem);
       color: var(--ink-soft);
       max-width: 52ch;
@@ -201,8 +232,10 @@
 
     .cover-foot-meta {
       text-align: right;
-      font-size: 0.72rem;
-      letter-spacing: 0.18em;
+      font-family: var(--font-sub);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
       color: var(--ink-soft);
       line-height: 1.8;
@@ -227,17 +260,18 @@
     }
 
     .row .row-num {
-      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
-      font-style: italic;
-      font-weight: 400;
-      font-size: 0.95rem;
-      color: var(--green);
-      letter-spacing: 0.05em;
+      font-family: var(--font-sub);
+      font-style: normal;
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--grass);
     }
 
     .row .row-title {
-      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
-      font-weight: 500;
+      font-family: var(--font-head);
+      font-weight: 400;
       font-size: clamp(1.15rem, 1.5vw, 1.45rem);
       color: var(--ink);
       line-height: 1.25;
@@ -252,7 +286,7 @@
     }
 
     .row .row-detail strong {
-      color: var(--green);
+      color: var(--creek);
       font-weight: 600;
       font-variant-numeric: tabular-nums;
     }
@@ -261,10 +295,10 @@
       display: inline-block;
       margin-left: 0.6rem;
       padding: 0.18rem 0.55rem;
-      border: 1px solid var(--green);
-      color: var(--green);
+      border: 1px solid var(--grass);
+      color: var(--tree);
       border-radius: 100px;
-      font-family: 'Inter', sans-serif;
+      font-family: var(--font-sub);
       font-style: normal;
       font-size: 0.6rem;
       font-weight: 500;
@@ -282,7 +316,7 @@
     .slide.dark .row .row-num { color: var(--green-light); }
     .slide.dark .row .row-title { color: var(--cream); }
     .slide.dark .row .row-detail { color: rgba(247, 245, 240, 0.7); }
-    .slide.dark .row-tag { border-color: rgba(168, 201, 140, 0.5); color: var(--green-light); }
+    .slide.dark .row-tag { border-color: rgba(151, 160, 129, 0.55); color: var(--sky); }
 
     /* ---------- Slide 4: vision bullets (clean) ---------- */
     .vision-list {
@@ -303,16 +337,16 @@
     }
 
     .vision-list .num {
-      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+      font-family: var(--font-head);
       font-style: italic;
       font-weight: 400;
       font-size: 0.95rem;
-      color: var(--green);
+      color: var(--grass);
       letter-spacing: 0.05em;
     }
 
     .vision-list .text {
-      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+      font-family: var(--font-head);
       font-style: italic;
       font-weight: 300;
       font-size: clamp(1.15rem, 1.55vw, 1.55rem);
@@ -329,12 +363,12 @@
       border: 1.5px solid var(--line);
       border-radius: 14px;
       padding: clamp(1.35rem, 2.8vw, 2.15rem) clamp(1.5rem, 3vw, 2.5rem);
-      background: rgba(247, 245, 240, 0.55);
-      box-shadow: 0 1px 0 rgba(26, 26, 26, 0.04);
+      background: rgba(167, 189, 213, 0.22);
+      box-shadow: 0 1px 0 rgba(42, 55, 35, 0.06);
     }
 
     .story-frame p {
-      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+      font-family: var(--font-head);
       font-style: italic;
       font-weight: 300;
       font-size: clamp(1.05rem, 1.35vw, 1.28rem);
@@ -350,7 +384,7 @@
     .story-frame strong {
       font-style: normal;
       font-weight: 500;
-      color: var(--green);
+      color: var(--tree);
     }
 
     .goal-story-wrap {
@@ -359,7 +393,7 @@
     }
 
     .goal-inset-note {
-      font-family: 'Inter', sans-serif;
+      font-family: var(--font-body);
       font-size: clamp(0.78rem, 0.88vw, 0.88rem);
       color: var(--ink-soft);
       line-height: 1.55;
@@ -391,26 +425,27 @@
     }
 
     .goal-amount-clean {
-      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+      font-family: var(--font-head);
       font-style: italic;
       font-weight: 400;
       font-size: clamp(3.5rem, 7.5vw, 7.5rem);
-      color: var(--green);
+      color: var(--creek);
       line-height: 0.9;
       letter-spacing: -0.02em;
     }
 
     .goal-side-clean .label {
-      font-size: 0.7rem;
-      letter-spacing: 0.18em;
+      font-family: var(--font-sub);
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: var(--green);
-      font-weight: 500;
+      color: var(--tree);
+      font-weight: 600;
       margin-bottom: 0.7rem;
     }
 
     .goal-side-clean p {
-      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+      font-family: var(--font-head);
       font-style: italic;
       font-weight: 300;
       font-size: clamp(1.1rem, 1.45vw, 1.45rem);
@@ -422,7 +457,7 @@
     .goal-side-clean p strong {
       font-style: normal;
       font-weight: 500;
-      color: var(--green);
+      color: var(--tree);
     }
 
     .goal-progress {
@@ -431,7 +466,7 @@
 
     .goal-progress-bar {
       height: 6px;
-      background: rgba(61, 90, 61, 0.12);
+      background: rgba(151, 160, 129, 0.28);
       border-radius: 100px;
       overflow: hidden;
     }
@@ -439,7 +474,7 @@
     .goal-progress-fill {
       height: 100%;
       width: 0%;
-      background: var(--green);
+      background: var(--tree);
       border-radius: 100px;
       transition: width 0.7s cubic-bezier(0.4, 0, 0.2, 1);
     }
@@ -455,18 +490,20 @@
     }
 
     .goal-progress-amount {
-      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+      font-family: var(--font-head);
       font-style: italic;
       font-weight: 400;
-      color: var(--green);
+      color: var(--creek);
       font-size: 1rem;
       font-variant-numeric: tabular-nums;
     }
 
     .goal-progress-label {
+      font-family: var(--font-sub);
       text-transform: uppercase;
       letter-spacing: 0.14em;
-      font-size: 0.7rem;
+      font-size: 0.68rem;
+      font-weight: 500;
     }
 
     /* ---------- Sponsor tiers ---------- */
@@ -539,26 +576,26 @@
     .tier:last-child { padding-right: 0; border-right: none; }
 
     .tier-main {
-      background: rgba(168, 201, 140, 0.10);
+      background: rgba(151, 160, 129, 0.18);
     }
 
     .tier-featured {
       position: absolute;
       top: 0.9rem;
       right: 0.9rem;
-      font-family: 'Inter', sans-serif;
+      font-family: var(--font-sub);
       font-size: 0.6rem;
-      font-weight: 500;
-      letter-spacing: 0.18em;
+      font-weight: 600;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--green);
+      color: var(--tree);
       padding: 0.18rem 0.55rem;
-      border: 1px solid var(--green);
+      border: 1px solid var(--tree);
       border-radius: 100px;
     }
 
     .tier-tag {
-      font-family: 'Inter', sans-serif;
+      font-family: var(--font-sub);
       font-size: 0.72rem;
       font-weight: 500;
       letter-spacing: 0.18em;
@@ -567,10 +604,10 @@
       margin-bottom: 0.9rem;
     }
 
-    .tier-main .tier-tag { color: var(--green); }
+    .tier-main .tier-tag { color: var(--tree); }
 
     .tier-amount {
-      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+      font-family: var(--font-head);
       font-style: italic;
       font-weight: 400;
       font-size: clamp(2rem, 3.4vw, 3.4rem);
@@ -580,10 +617,10 @@
       letter-spacing: -0.01em;
     }
 
-    .tier-main .tier-amount { color: var(--green); }
+    .tier-main .tier-amount { color: var(--tree); }
 
     .tier-spots {
-      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+      font-family: var(--font-head);
       font-style: italic;
       font-weight: 300;
       font-size: 0.95rem;
@@ -592,14 +629,14 @@
     }
 
     .tier-examples {
-      font-family: 'Inter', sans-serif;
+      font-family: var(--font-body);
       font-size: clamp(0.76rem, 0.84vw, 0.84rem);
       color: var(--ink-soft);
       line-height: 1.5;
       padding: 0.5rem 0.65rem;
       margin-bottom: 0.85rem;
-      background: rgba(61, 90, 61, 0.06);
-      border-left: 2px solid var(--green);
+      background: rgba(167, 189, 213, 0.25);
+      border-left: 3px solid var(--creek);
     }
 
     .tier-examples em {
@@ -609,8 +646,9 @@
     }
 
     .tier-examples strong {
-      font-weight: 500;
-      color: var(--green);
+      font-family: var(--font-sub);
+      font-weight: 600;
+      color: var(--tree);
       letter-spacing: 0.06em;
       text-transform: uppercase;
       font-size: 0.65rem;
@@ -625,7 +663,7 @@
     }
 
     .tier-perks li {
-      font-family: 'Inter', sans-serif;
+      font-family: var(--font-body);
       font-size: clamp(0.82rem, 0.92vw, 0.92rem);
       color: var(--ink);
       line-height: 1.5;
@@ -638,20 +676,21 @@
     .tier-perks li:first-child { border-top: none; padding-top: 0; }
 
     .tier-perks li::before {
-      content: "→";
-      color: var(--green);
+      content: ">>>";
+      color: var(--creek);
+      font-size: 0.65rem;
+      letter-spacing: -0.06em;
       flex-shrink: 0;
     }
 
     /* ---------- Slide 6 (dark CTA) ---------- */
     .slide.dark {
-      background: var(--bg-dark);
+      background: var(--charcoal);
       color: var(--cream);
     }
 
-    .slide.dark .topbar-right { color: rgba(247, 245, 240, 0.55); }
+    .slide.dark .topbar-right { color: rgba(255, 255, 241, 0.55); }
     .slide.dark .logo { color: var(--cream); }
-    .slide.dark .logo-mark { border-color: var(--cream); color: var(--cream); }
 
     .cta-block {
       margin-top: auto;
@@ -664,7 +703,7 @@
     }
 
     .cta-text {
-      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+      font-family: var(--font-head);
       font-style: italic;
       font-weight: 300;
       font-size: clamp(1.15rem, 1.45vw, 1.45rem);
@@ -680,23 +719,23 @@
       margin-top: 0.7rem;
     }
 
-    .contact-line a { color: var(--green); text-decoration: none; }
+    .contact-line a { color: var(--creek); text-decoration: none; }
     .contact-line a:hover { text-decoration: underline; }
 
     .slide.dark .cta-block { border-top-color: var(--line-dark); }
     .slide.dark .cta-text { color: rgba(247, 245, 240, 0.88); }
     .slide.dark .contact-line { color: rgba(247, 245, 240, 0.55); }
-    .slide.dark .contact-line a { color: var(--green-light); }
+    .slide.dark .contact-line a { color: var(--sky); }
 
     .cta-button {
       display: inline-flex;
       align-items: center;
       gap: 0.6rem;
       padding: 0.95rem 1.8rem;
-      background: var(--green);
+      background: var(--tree);
       color: var(--cream);
       border-radius: 100px;
-      font-family: 'Inter', sans-serif;
+      font-family: var(--font-sub);
       font-size: 0.92rem;
       font-weight: 500;
       letter-spacing: 0.01em;
@@ -706,11 +745,11 @@
       text-decoration: none;
     }
 
-    .cta-button:hover { background: var(--green-soft); transform: translateY(-1px); }
+    .cta-button:hover { background: var(--creek); color: var(--canvas); transform: translateY(-1px); }
     .cta-button .arrow { font-size: 1rem; }
 
     .signature {
-      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+      font-family: var(--font-head);
       font-style: italic;
       font-weight: 300;
       font-size: 0.85rem;
@@ -736,9 +775,8 @@
     }
 
     .closer-title {
-      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+      font-family: var(--font-head);
       font-weight: 400;
-      font-variation-settings: "opsz" 144, "SOFT" 30;
       font-size: clamp(3rem, 8vw, 8.5rem);
       line-height: 1.02;
       letter-spacing: -0.032em;
@@ -747,6 +785,7 @@
     }
 
     .closer-sub {
+      font-family: var(--font-body);
       font-size: clamp(1rem, 1.15vw, 1.12rem);
       color: var(--ink-soft);
       line-height: 1.55;
@@ -779,8 +818,10 @@
     .closer-channel-label {
       display: inline-block;
       min-width: 3.75rem;
-      font-size: 0.72rem;
-      letter-spacing: 0.14em;
+      font-family: var(--font-sub);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--ink-soft);
       vertical-align: baseline;
@@ -789,7 +830,7 @@
     .closer-channel-link {
       font-size: 1rem;
       font-weight: 500;
-      color: var(--green);
+      color: var(--creek);
       text-decoration: none;
       word-break: break-all;
     }
@@ -803,7 +844,7 @@
       margin-top: 2rem;
       padding-top: 1.5rem;
       border-top: 1px solid var(--line);
-      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+      font-family: var(--font-head);
       font-style: italic;
       font-weight: 300;
       font-size: clamp(1.05rem, 1.3vw, 1.3rem);
@@ -813,8 +854,8 @@
 
     .closer-signoff strong {
       font-style: normal;
-      font-weight: 500;
-      color: var(--ink);
+      font-weight: 600;
+      color: var(--tree);
     }
 
     /* ---------- Navigation ---------- */
@@ -827,10 +868,10 @@
       align-items: center;
       gap: 0.8rem;
       padding: 0.55rem 1rem;
-      background: rgba(13, 13, 13, 0.85);
+      background: rgba(42, 55, 35, 0.92);
       backdrop-filter: blur(12px);
       border-radius: 100px;
-      border: 1px solid rgba(247, 245, 240, 0.15);
+      border: 1px solid rgba(255, 255, 241, 0.12);
       z-index: 100;
       opacity: 1;
       transition: opacity 0.4s ease;
@@ -844,13 +885,13 @@
     /* Keyboard focus indicator */
     button:focus-visible,
     a:focus-visible {
-      outline: 2px solid var(--green);
+      outline: 2px solid var(--creek);
       outline-offset: 3px;
       border-radius: 4px;
     }
     .slide.dark a:focus-visible,
     .slide.dark button:focus-visible {
-      outline-color: var(--green-light);
+      outline-color: var(--sky);
     }
     .nav button:focus-visible,
     .dot:focus-visible {
@@ -860,26 +901,26 @@
     .nav button {
       background: transparent;
       border: none;
-      color: rgba(247, 245, 240, 0.85);
+      color: rgba(255, 255, 241, 0.88);
       cursor: pointer;
       font-size: 0.9rem;
-      font-family: 'Inter', sans-serif;
+      font-family: var(--font-sub);
       font-weight: 500;
       padding: 0.25rem 0.6rem;
       border-radius: 100px;
     }
-    .nav button:hover { color: var(--cream); }
+    .nav button:hover { color: var(--sand); }
     .nav button:disabled { opacity: 0.3; cursor: not-allowed; }
 
     .dots { display: flex; gap: 0.45rem; align-items: center; }
     .dot {
       width: 6px; height: 6px;
       border-radius: 50%;
-      background: rgba(247, 245, 240, 0.3);
+      background: rgba(255, 255, 241, 0.28);
       transition: all 0.3s ease;
       cursor: pointer; border: none; padding: 0;
     }
-    .dot.active { background: var(--cream); width: 20px; border-radius: 4px; }
+    .dot.active { background: var(--sand); width: 20px; border-radius: 4px; }
 
     /* ---------- Print ---------- */
     @media print {
@@ -923,8 +964,8 @@
     <section class="slide cover active" data-index="0">
       <div class="topbar">
         <div class="logo">
-          <span class="logo-mark">B</span>
-          Back to Being
+          <span class="logo-mark" aria-hidden="true"></span>
+          back to being
         </div>
       </div>
 
@@ -950,8 +991,8 @@
     <section class="slide" data-index="1">
       <div class="topbar">
         <div class="logo">
-          <span class="logo-mark">B</span>
-          Back to Being
+          <span class="logo-mark" aria-hidden="true"></span>
+          back to being
         </div>
       </div>
 
@@ -974,8 +1015,8 @@
     <section class="slide" data-index="2">
       <div class="topbar">
         <div class="logo">
-          <span class="logo-mark">B</span>
-          Back to Being
+          <span class="logo-mark" aria-hidden="true"></span>
+          back to being
         </div>
         <div class="topbar-right">
           <span>Waarom</span>
@@ -1015,8 +1056,8 @@
     <section class="slide" data-index="3">
       <div class="topbar">
         <div class="logo">
-          <span class="logo-mark">B</span>
-          Back to Being
+          <span class="logo-mark" aria-hidden="true"></span>
+          back to being
         </div>
         <div class="topbar-right">
           <span>Het doel</span>
@@ -1072,8 +1113,8 @@
     <section class="slide slide-tiers" data-index="4">
       <div class="topbar">
         <div class="logo">
-          <span class="logo-mark">B</span>
-          Back to Being
+          <span class="logo-mark" aria-hidden="true"></span>
+          back to being
         </div>
         <div class="topbar-right">
           <span>Partnerschap</span>
@@ -1146,8 +1187,8 @@
     <section class="slide" data-index="5">
       <div class="topbar">
         <div class="logo">
-          <span class="logo-mark">B</span>
-          Back to Being
+          <span class="logo-mark" aria-hidden="true"></span>
+          back to being
         </div>
         <div class="topbar-right">
           <span>Vervolg</span>
@@ -1203,8 +1244,8 @@
     <section class="slide closer" data-index="6">
       <div class="topbar">
         <div class="logo">
-          <span class="logo-mark">B</span>
-          Back to Being
+          <span class="logo-mark" aria-hidden="true"></span>
+          back to being
         </div>
         <div class="topbar-right">
           <span>Contact</span>
