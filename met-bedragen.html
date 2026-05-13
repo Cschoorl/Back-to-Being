@@ -577,27 +577,74 @@
       max-width: 44ch;
     }
 
-    /* Slide 6: vraagkop + sub */
-    .slide-vervolg .slide-q-head {
-      align-self: center;
-      text-align: center;
-      margin-bottom: clamp(1.25rem, 3vh, 2rem);
-      width: 100%;
-      max-width: min(52ch, 94vw);
+    /* ---------- Slide 6: recap ---------- */
+    .slide.slide-recap.slide--center {
+      padding: 8vh 5vw 10vh;
+      align-items: stretch;
     }
 
-    .slide-vervolg .slide-q-head .headline {
+    .slide-recap.slide--center .topbar {
+      margin-bottom: clamp(2vh, 4vw, 4vh);
+      width: 100%;
+    }
+
+    .slide-recap.slide--center .recap-headline {
       font-family: var(--font-sub);
       font-weight: 600;
       font-style: normal;
+      text-align: center;
+      align-self: center;
+      max-width: min(38ch, 92vw);
+      font-size: clamp(2rem, 3.8vw, 3rem);
+      line-height: 1.08;
       letter-spacing: -0.03em;
-      max-width: min(40ch, 96vw);
-      margin-bottom: 0.65rem;
+      margin-bottom: clamp(1.35rem, 3vh, 2rem);
     }
 
-    .slide-vervolg .slide-q-head .slide-q-sub {
-      margin-left: auto;
-      margin-right: auto;
+    .slide-recap .recap-grid {
+      display: grid;
+      gap: clamp(1rem, 2.2vh, 1.45rem);
+      width: 100%;
+      max-width: min(52rem, 94vw);
+      margin: 0 auto;
+      flex: 1;
+      align-content: start;
+    }
+
+    .slide-recap .recap-item {
+      border-left: 3px solid var(--grass);
+      padding-left: clamp(1rem, 2vw, 1.35rem);
+    }
+
+    .slide-recap .recap-kicker {
+      font-family: var(--font-sub);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--tree);
+      display: block;
+      margin-bottom: 0.35rem;
+    }
+
+    .slide-recap .recap-text {
+      font-family: var(--font-sub);
+      font-size: clamp(0.96rem, 1.18vw, 1.08rem);
+      line-height: 1.48;
+      color: var(--ink-soft);
+      margin: 0;
+    }
+
+    .slide-recap .recap-text strong {
+      color: var(--tree);
+      font-weight: 600;
+    }
+
+    .slide-recap .slide-recap-cta {
+      margin-top: clamp(1.5rem, 4vh, 2.5rem);
+      display: flex;
+      justify-content: center;
+      width: 100%;
     }
 
     /* Slide 7: contact als antwoord op vraag */
@@ -713,18 +760,6 @@
       line-height: 1.14;
       letter-spacing: -0.03em;
       margin-bottom: clamp(1rem, 2vh, 1.5rem);
-    }
-
-    .slide-vervolg .cta-block {
-      width: 100%;
-      max-width: min(52rem, 96vw);
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .slide-vervolg .cta-text {
-      font-size: clamp(1.12rem, 1.4vw, 1.38rem);
-      max-width: 52ch;
     }
 
     .cta-actions {
@@ -1053,10 +1088,6 @@
       padding-top: 0;
     }
 
-    .slide-vervolg .story-frame {
-      margin-top: 1.5vh;
-    }
-
     /* ---------- Slide 6 (dark CTA) ---------- */
     .slide.dark {
       background: var(--charcoal);
@@ -1121,19 +1152,6 @@
 
     .cta-button:hover { background: var(--creek); color: var(--canvas); transform: translateY(-1px); }
     .cta-button .arrow { font-size: 1rem; }
-
-    .slide-vervolg .cta-button--ghost {
-      background: transparent;
-      color: var(--tree);
-      border: 1.5px solid var(--tree);
-    }
-
-    .slide-vervolg .cta-button--ghost:hover {
-      background: rgba(42, 55, 35, 0.06);
-      color: var(--creek);
-      border-color: var(--creek);
-      transform: translateY(-1px);
-    }
 
     .cta-buttons-stack {
       display: flex;
@@ -1529,8 +1547,8 @@
       </div>
     </section>
 
-    <!-- ============ SLIDE 6: VERVOLG / CTA ============ -->
-    <section class="slide slide-vervolg slide--center" data-index="5">
+    <!-- ============ SLIDE 6: RECAP ============ -->
+    <section class="slide slide-recap slide--center" data-index="5">
       <div class="topbar">
         <div class="logo logo--icon-only" aria-label="back to being">
           <span class="logo-mark" aria-hidden="true"></span>
@@ -1540,48 +1558,45 @@
         </div>
       </div>
 
-      <div class="slide-q-head">
-        <h1 class="headline">
-          Wil jij een rol spelen in het verhaal dat wij gaan vertellen?
-        </h1>
-        <p class="slide-q-sub slide-q-sub--center">
-          Van eerste gesprek naar concrete afspraken—zonder eindeloze trajecten.
-        </p>
-      </div>
+      <h1 class="headline recap-headline">
+        Samengevat
+      </h1>
 
-      <p class="lede lede--wide">
-        We plannen een korte call, zetten afspraken scherp en gaan daarna het pad op.
-        Jouw bijdrage schalen we inhoudelijk mee, zonder starre tier-lijst.
-      </p>
-
-      <div class="story-frame story-frame--prose-lg">
-        <p>
-          Als onderdeel van het partnership brengen we het kantoor naar buiten bij jullie, met
-          een walking workshop en een AI-sessie op jullie locatie. Na de Camino plannen we een
-          gezamenlijk debrief om resultaat, docu en vervolg te delen met jullie stakeholders.
-        </p>
-      </div>
-
-      <div class="cta-block">
-        <div>
-          <p class="cta-text">
-            Zo zet je de volgende stap — kies wat bij je past:
+      <div class="recap-grid">
+        <div class="recap-item">
+          <span class="recap-kicker">Het idee</span>
+          <p class="recap-text">
+            De wereld als kantoor: de Camino wordt onze werkplek—we bouwen onderweg live aan één
+            AI-product voor mentale gezondheid en dragen het daarna <strong>gratis</strong> over aan <strong>MIND</strong>.
           </p>
-          <ul class="cta-actions">
-            <li><strong>Plan een call</strong> — tien tot twintig minuten, dan weten we waar we staan.</li>
-            <li><strong>Mail ons</strong> — één mailtje volstaat om los te komen.</li>
-            <li><strong>Kom langs op ons kantoor</strong> in Amsterdam, of we komen graag bij jullie langs.</li>
-          </ul>
         </div>
-        <div class="cta-buttons-stack">
-          <a class="cta-button"
-            href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being%3A%20afspraak&amp;body=Hi%2C%0A%0AIk%20wil%20Back%20to%20Being%20bespreken%20(plan%20een%20call%20%2F%20mail%20%2F%20langs%20komen).%0A%0AHartelijke%20groet">
-            Mail voor een afspraak <span class="arrow">→</span>
-          </a>
-          <button class="cta-button cta-button--ghost" type="button" id="cta-next-contact">
-            Naar contact <span class="arrow">→</span>
-          </button>
+        <div class="recap-item">
+          <span class="recap-kicker">Het verhaal</span>
+          <p class="recap-text">
+            Van bureau naar bergpas: laten zien dat technologie en menselijkheid samenkunnen—met een
+            mini-docu die vastlegt hoe dat er op het pad uitziet.
+          </p>
         </div>
+        <div class="recap-item">
+          <span class="recap-kicker">Het budget</span>
+          <p class="recap-text">
+            <strong>€30.000</strong> voor onder andere gear en voeding, slaapplekken, de reis zelf,
+            wifi onderweg en apparatuur om dit verhaal in een mini-docu scherp te vertellen.
+          </p>
+        </div>
+        <div class="recap-item">
+          <span class="recap-kicker">Partners</span>
+          <p class="recap-text">
+            <strong>TechLeap</strong>, <strong>AIAM</strong>, <strong>TAG</strong> en <strong>Lerai</strong> zijn nu al mee—het verhaal heeft tractie.
+          </p>
+        </div>
+      </div>
+
+      <div class="slide-recap-cta">
+        <button type="button" class="cta-button" id="cta-recap-next"
+          aria-label="Volgende slide: contact">
+          Loop je met ons mee? <span class="arrow" aria-hidden="true">→</span>
+        </button>
       </div>
     </section>
 
@@ -1725,15 +1740,7 @@
         }
       })();
 
-      var nextContactBtn = document.getElementById('cta-next-contact');
-      if (nextContactBtn) {
-        nextContactBtn.addEventListener('click', function (ev) {
-          ev.preventDefault();
-          go(total - 1);
-        });
-      }
-
-      ['cta-wat-doen-next', 'cta-waarom-next', 'cta-partners-next'].forEach(function (buttonId) {
+      ['cta-wat-doen-next', 'cta-waarom-next', 'cta-partners-next', 'cta-recap-next'].forEach(function (buttonId) {
         var btn = document.getElementById(buttonId);
         if (!btn) return;
         btn.addEventListener('click', function () {
