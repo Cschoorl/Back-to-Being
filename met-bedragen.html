@@ -477,6 +477,78 @@
       line-height: 1.58;
     }
 
+    /* ---------- Slide 2: Wat gaan we doen? (twee kolommen, geen kader) ---------- */
+    .slide.slide-wat-doen.slide--center {
+      align-items: stretch;
+    }
+
+    .slide.slide-wat-doen {
+      padding: 8vh 5vw 11vh;
+    }
+
+    .slide-wat-doen.slide--center .topbar {
+      margin-bottom: 4.5vh;
+    }
+
+    .slide-wat-doen.slide--center .pill {
+      margin-bottom: 2.25rem;
+    }
+
+    .slide-wat-doen.slide--center .headline {
+      font-family: var(--font-sub);
+      font-weight: 600;
+      font-style: normal;
+      font-size: clamp(2.35rem, 4.8vw, 4rem);
+      letter-spacing: -0.03em;
+      line-height: 1.08;
+      max-width: none;
+      width: 100%;
+      text-align: center;
+      align-self: center;
+      margin-bottom: clamp(2.5rem, 5vh, 3.75rem);
+    }
+
+    .slide-wat-doen .wat-doen-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2.25rem, 4.5vw, 4rem);
+      column-gap: clamp(2.5rem, 6vw, 5.5rem);
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      align-self: stretch;
+      flex: 1;
+    }
+
+    .slide-wat-doen .wat-doen-col {
+      display: flex;
+      flex-direction: column;
+      gap: clamp(1.15rem, 2.2vh, 1.65rem);
+      min-width: 0;
+    }
+
+    .slide-wat-doen .wat-doen-col p {
+      font-family: var(--font-body);
+      font-style: normal;
+      font-weight: 400;
+      font-size: clamp(1.06rem, 1.38vw, 1.28rem);
+      line-height: 1.62;
+      color: var(--ink-soft);
+      margin: 0;
+    }
+
+    .slide-wat-doen .wat-doen-col p strong {
+      color: var(--tree);
+      font-weight: 600;
+    }
+
+    @media (max-width: 900px) {
+      .slide-wat-doen .wat-doen-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+
     /* Budget-overzicht (vervangt vaste sponsortiers) */
     .slide-budget .lede {
       max-width: min(68ch, 94vw);
@@ -1306,8 +1378,8 @@
       </div>
     </section>
 
-    <!-- ============ SLIDE 2: WAT WIJ DOEN ============ -->
-    <section class="slide slide--center" data-index="1">
+    <!-- ============ SLIDE 2: WAT GAAN WE DOEN? ============ -->
+    <section class="slide slide--center slide-wat-doen" data-index="1">
       <div class="topbar">
         <div class="logo logo--icon-only" aria-label="back to being">
           <span class="logo-mark" aria-hidden="true"></span>
@@ -1321,26 +1393,37 @@
       <span class="pill">Het project</span>
 
       <h1 class="headline">
-        Wat wij precies gaan doen
+        Wat gaan we doen?
       </h1>
 
-      <div class="story-frame story-frame--prose-lg">
-        <p>
-          Wij zijn drie AI nerds uit Amsterdam, ook founders, maar vooral
-          mensen die liever bouwen dan slides maken. Deze zomer lopen we de
-          Camino van Tui naar Santiago en bouwen onderweg live aan één
-          AI tool voor mentale gezondheid. Daarna dragen we die over aan
-          stichting MIND. Sponsors maken reis, productie en overdracht voor
-          ons mogelijk.
-        </p>
-        <p>
-          De tool die we onderweg bouwen, dragen we gratis over aan MIND.
-          Wat het precies wordt, bepalen we samen met hen. Hun behoefte is
-          leidend en ons werk is om iets bruikbaars te bouwen. Zo blijft het
-          verhaal concreet, met een route, een proces in de open lucht en een
-          eindproduct dat terechtkomt bij een organisatie die werkt aan
-          mentale gezondheid.
-        </p>
+      <div class="wat-doen-grid">
+        <div class="wat-doen-col">
+          <p>
+            Wij zijn drie AI-nerds uit Amsterdam—founders, maar vooral mensen die
+            liever bouwen dan slides maken.
+          </p>
+          <p>
+            Deze zomer lopen we de Camino van Tui naar Santiago en bouwen onderweg live
+            aan één AI-tool voor mentale gezondheid.
+          </p>
+          <p>
+            Daarna dragen we die over aan stichting MIND; sponsors maken reis, productie
+            en overdracht voor ons mogelijk.
+          </p>
+        </div>
+        <div class="wat-doen-col">
+          <p>
+            De tool die we onderweg bouwen, dragen we <strong>gratis</strong> over aan MIND.
+          </p>
+          <p>
+            Wat het precies wordt, bepalen we samen met hen: hun behoefte is leidend, ons
+            werk is iets bruikbaars bouwen.
+          </p>
+          <p>
+            Zo blijft het concreet—een route, een proces in de open lucht en een eindproduct
+            bij een organisatie die werkt aan mentale gezondheid.
+          </p>
+        </div>
       </div>
     </section>
 
