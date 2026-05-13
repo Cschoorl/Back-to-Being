@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Back to Being: The World as our Office</title>
+  <title>Back to Being: The World is our Office</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -37,8 +37,9 @@
       --font-head:   "Instrument Serif", Georgia, "Times New Roman", serif;
       --font-sub:    "Inter Tight", "Inter", -apple-system, sans-serif;
       --font-body:   "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      --logo-mark-svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cg fill='none' stroke='%232A3723' stroke-width='3.2' stroke-linecap='round'%3E%3Cpath d='M20 34V12'/%3E%3Cpath d='M20 12 9 20'/%3E%3Cpath d='M20 12 31 20'/%3E%3Cpath d='M20 12 5 26'/%3E%3Cpath d='M20 12 35 26'/%3E%3C/g%3E%3C/svg%3E");
-      --logo-mark-svg-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cg fill='none' stroke='%23FFFFF1' stroke-width='3.2' stroke-linecap='round'%3E%3Cpath d='M20 34V12'/%3E%3Cpath d='M20 12 9 20'/%3E%3Cpath d='M20 12 31 20'/%3E%3Cpath d='M20 12 5 26'/%3E%3Cpath d='M20 12 35 26'/%3E%3C/g%3E%3C/svg%3E");
+      --logo-mark-svg:       url("assets/SVG/LOGOMARK_B2B.svg");
+      --logo-mark-svg-light: url("assets/SVG/LOGOMARK_B2B_light.svg");
+      --logo-mark-svg-cover: url("assets/SVG/LOGOMARK_B2B_cover.svg");
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -101,16 +102,26 @@
     }
 
     .logo-mark {
-      width: 28px;
-      height: 28px;
+      width: 48px;
+      height: 26px;
       flex-shrink: 0;
       border: none;
       border-radius: 0;
       background: var(--logo-mark-svg) center / contain no-repeat;
     }
 
+    .slide.cover .logo-mark {
+      width: 56px;
+      height: 30px;
+      background: var(--logo-mark-svg-cover) center / contain no-repeat;
+    }
+
     .slide.dark .logo-mark {
-      background-image: var(--logo-mark-svg-light);
+      background: var(--logo-mark-svg-light) center / contain no-repeat;
+    }
+
+    .logo--icon-only {
+      gap: 0;
     }
 
     .topbar-right {
@@ -189,9 +200,11 @@
 
     .slide.dark .lede { color: rgba(247, 245, 240, 0.7); }
 
-    /* ---------- Slide 1: COVER (ultra clean) ---------- */
+    /* ---------- Slide 1: COVER (wit + blauw accent) ---------- */
     .slide.cover {
       justify-content: space-between;
+      background: #ffffff;
+      color: var(--charcoal);
     }
 
     .cover-headline {
@@ -204,9 +217,7 @@
       margin: auto 0 0;
     }
 
-    .cover-headline em {
-      font-style: italic;
-      font-weight: 400;
+    .slide.cover .cover-headline em {
       color: var(--creek);
     }
 
@@ -216,18 +227,8 @@
       align-items: end;
       gap: 2vw;
       padding-top: 2.5vh;
-      border-top: 1px solid var(--line);
+      border-top: 1px solid rgba(66, 77, 105, 0.28);
       margin-top: 6vh;
-    }
-
-    .cover-tagline {
-      font-family: var(--font-body);
-      font-style: normal;
-      font-weight: 400;
-      font-size: clamp(1.12rem, 1.5vw, 1.45rem);
-      color: var(--ink-soft);
-      max-width: min(62ch, 90vw);
-      line-height: 1.55;
     }
 
     .cover-foot-meta {
@@ -240,6 +241,27 @@
       color: var(--ink-soft);
       line-height: 1.8;
       flex-shrink: 0;
+    }
+
+    .slide.cover .cover-foot-meta {
+      color: var(--creek);
+    }
+
+    .cover-tagline {
+      font-family: var(--font-sub);
+      font-style: normal;
+      font-weight: 400;
+      font-size: clamp(1.05rem, 1.42vw, 1.38rem);
+      color: var(--ink-soft);
+      max-width: min(62ch, 90vw);
+      line-height: 1.55;
+      letter-spacing: 0.01em;
+    }
+
+    .cover-tagline-accent {
+      display: inline;
+      color: var(--creek);
+      font-weight: 600;
     }
 
     /* ---------- Generic line-divided list (used on slides 2,3,5,6) ---------- */
@@ -1268,14 +1290,14 @@
 
       <h1 class="cover-headline">
         The world<br />
-        as our <em>office.</em>
+        is our <em>office.</em>
       </h1>
 
       <div class="cover-foot">
         <p class="cover-tagline">
           Drie AI-nerds maken van de Camino hun kantoor: 115 km,
           live bouwen in beeld, daarna een echte overdracht aan MIND.
-          Sponsoring zet dit verhaal op de kaart. Loop jij met ons mee?
+          <span class="cover-tagline-accent">Sponsoring zet dit verhaal op de kaart. Loop je met ons mee?</span>
         </p>
         <div class="cover-foot-meta">
           Tui naar Santiago<br />
@@ -1287,9 +1309,8 @@
     <!-- ============ SLIDE 2: WAT WIJ DOEN ============ -->
     <section class="slide slide--center" data-index="1">
       <div class="topbar">
-        <div class="logo">
+        <div class="logo logo--icon-only" aria-label="back to being">
           <span class="logo-mark" aria-hidden="true"></span>
-          back to being
         </div>
         <div class="topbar-right">
           <span>Het project</span>
@@ -1326,9 +1347,8 @@
     <!-- ============ SLIDE 3: WAAROM (verhaal) ============ -->
     <section class="slide slide--center" data-index="2">
       <div class="topbar">
-        <div class="logo">
+        <div class="logo logo--icon-only" aria-label="back to being">
           <span class="logo-mark" aria-hidden="true"></span>
-          back to being
         </div>
         <div class="topbar-right">
           <span>Waarom</span>
@@ -1364,9 +1384,8 @@
     <!-- ============ SLIDE 4: HET DOEL ============ -->
     <section class="slide" data-index="3">
       <div class="topbar">
-        <div class="logo">
+        <div class="logo logo--icon-only" aria-label="back to being">
           <span class="logo-mark" aria-hidden="true"></span>
-          back to being
         </div>
         <div class="topbar-right">
           <span>Het doel</span>
@@ -1414,9 +1433,8 @@
     <!-- ============ SLIDE 5: BUDGET ============ -->
     <section class="slide slide-budget slide--center" data-index="4">
       <div class="topbar">
-        <div class="logo">
+        <div class="logo logo--icon-only" aria-label="back to being">
           <span class="logo-mark" aria-hidden="true"></span>
-          back to being
         </div>
         <div class="topbar-right">
           <span>Budget</span>
@@ -1473,9 +1491,8 @@
     <!-- ============ SLIDE 6: VERVOLG / CTA ============ -->
     <section class="slide slide-vervolg slide--center" data-index="5">
       <div class="topbar">
-        <div class="logo">
+        <div class="logo logo--icon-only" aria-label="back to being">
           <span class="logo-mark" aria-hidden="true"></span>
-          back to being
         </div>
         <div class="topbar-right">
           <span>Vervolg</span>
@@ -1528,9 +1545,8 @@
     <!-- ============ SLIDE 7: CONTACT ============ -->
     <section class="slide closer" data-index="6">
       <div class="topbar">
-        <div class="logo">
+        <div class="logo logo--icon-only" aria-label="back to being">
           <span class="logo-mark" aria-hidden="true"></span>
-          back to being
         </div>
         <div class="topbar-right">
           <span>Contact</span>
