@@ -221,13 +221,13 @@
     }
 
     .cover-tagline {
-      font-family: var(--font-head);
-      font-style: italic;
+      font-family: var(--font-body);
+      font-style: normal;
       font-weight: 400;
-      font-size: clamp(1.05rem, 1.35vw, 1.35rem);
+      font-size: clamp(1.12rem, 1.5vw, 1.45rem);
       color: var(--ink-soft);
-      max-width: 52ch;
-      line-height: 1.5;
+      max-width: min(62ch, 90vw);
+      line-height: 1.55;
     }
 
     .cover-foot-meta {
@@ -267,7 +267,6 @@
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--grass);
-      letter-spacing: 0.12em;
     }
 
     .row .row-title {
@@ -412,6 +411,261 @@
 
     .slide.cover .topbar {
       justify-content: flex-start;
+    }
+
+    /* Grotere, ruimtelijker gebruikte content (feedback pitch) */
+    .slide.slide--center {
+      align-items: center;
+    }
+
+    .slide.slide--center .topbar {
+      width: 100%;
+      margin-bottom: 3vh;
+    }
+
+    .slide.slide--center .pill {
+      align-self: center;
+    }
+
+    .slide.slide--center .headline {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 24ch;
+    }
+
+    .slide.slide--center .story-frame {
+      margin-top: 2vh;
+      max-width: min(72ch, 94vw);
+      align-self: center;
+      width: 100%;
+    }
+
+    .story-frame.story-frame--prose-lg p {
+      font-size: clamp(1.18rem, 1.75vw, 1.52rem);
+      line-height: 1.52;
+    }
+
+    .slide.slide--center .lede.lede--wide {
+      max-width: min(68ch, 94vw);
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      font-size: clamp(1.05rem, 1.35vw, 1.22rem);
+      line-height: 1.58;
+    }
+
+    /* Budget-overzicht (vervangt vaste sponsortiers) */
+    .slide-budget .lede {
+      max-width: min(68ch, 94vw);
+      font-size: clamp(1.02rem, 1.22vw, 1.18rem);
+      line-height: 1.55;
+    }
+
+    .budget-board {
+      width: 100%;
+      max-width: 46rem;
+      margin: 1.5vh auto 0;
+      border: 1.5px solid var(--line);
+      border-radius: 14px;
+      padding: clamp(1rem, 2vw, 1.5rem) clamp(1.25rem, 2.5vw, 2rem);
+      background: rgba(167, 189, 213, 0.14);
+    }
+
+    .budget-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: var(--font-body);
+      font-size: clamp(0.98rem, 1.12vw, 1.1rem);
+    }
+
+    .budget-table tr {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .budget-table tr:last-child {
+      border-bottom: none;
+    }
+
+    .budget-table td {
+      padding: 0.62rem 0;
+      vertical-align: baseline;
+    }
+
+    .budget-table td:first-child {
+      color: var(--ink);
+      padding-right: 1rem;
+    }
+
+    .budget-table td:last-child {
+      text-align: right;
+      white-space: nowrap;
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+      color: var(--creek);
+    }
+
+    .budget-foot {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--line);
+      font-family: var(--font-sub);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .budget-aside {
+      max-width: min(68ch, 94vw);
+      margin: 2vh auto 0;
+      font-family: var(--font-body);
+      font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+      line-height: 1.55;
+      color: var(--ink-soft);
+      text-align: center;
+    }
+
+    .budget-aside strong {
+      color: var(--tree);
+      font-weight: 600;
+    }
+
+    .micro-note {
+      max-width: min(62ch, 92vw);
+      margin: 1.25vh auto 0;
+      font-family: var(--font-body);
+      font-size: clamp(0.82rem, 0.95vw, 0.92rem);
+      line-height: 1.5;
+      color: var(--ink-soft);
+      font-style: italic;
+      text-align: center;
+    }
+
+    .slide-budget.slide--center .headline {
+      max-width: min(30ch, 94vw);
+    }
+
+    .slide-vervolg .cta-block {
+      width: 100%;
+      max-width: min(52rem, 96vw);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .slide-vervolg .cta-text {
+      font-size: clamp(1.12rem, 1.4vw, 1.38rem);
+      max-width: 52ch;
+    }
+
+    .cta-actions {
+      list-style: none;
+      margin: 1rem 0 0;
+      padding: 0;
+      font-family: var(--font-body);
+      font-size: clamp(0.95rem, 1.08vw, 1.05rem);
+      line-height: 1.65;
+      color: var(--ink);
+    }
+
+    .cta-actions li {
+      padding: 0.15rem 0;
+      color: var(--ink-soft);
+    }
+
+    .slide.dark .cta-actions,
+    .slide.dark .cta-actions li {
+      color: rgba(247, 245, 240, 0.88);
+    }
+
+    .slide.closer .closer-body {
+      max-width: min(52rem, 96vw);
+      width: 100%;
+    }
+
+    .closer-intro {
+      font-family: var(--font-body);
+      font-size: clamp(1.05rem, 1.2vw, 1.15rem);
+      line-height: 1.55;
+      color: var(--ink-soft);
+      max-width: 48ch;
+      margin-bottom: 2rem;
+    }
+
+    .closer-contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+      gap: 1.25rem 2rem;
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    .closer-card {
+      border: 1.5px solid var(--line);
+      border-radius: 12px;
+      padding: 1.1rem 1.25rem;
+      background: rgba(167, 189, 213, 0.12);
+    }
+
+    .closer-card h2 {
+      font-family: var(--font-sub);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--tree);
+      margin-bottom: 0.5rem;
+    }
+
+    .closer-card p,
+    .closer-card a {
+      font-family: var(--font-body);
+      font-size: 0.98rem;
+      line-height: 1.45;
+      color: var(--ink);
+      margin: 0;
+    }
+
+    .closer-card a {
+      color: var(--creek);
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .closer-card a:hover {
+      text-decoration: underline;
+    }
+
+    .closer-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .closer-actions a {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.55rem 1.1rem;
+      border-radius: 100px;
+      border: 1.5px solid var(--grass);
+      font-family: var(--font-sub);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--tree);
+      text-decoration: none;
+      background: rgba(151, 160, 129, 0.12);
+    }
+
+    .closer-actions a:hover {
+      border-color: var(--creek);
+      color: var(--creek);
     }
 
     /* ---------- Slide 5: goal (clean, no box) ---------- */
@@ -779,6 +1033,26 @@
     .cta-button:hover { background: var(--creek); color: var(--canvas); transform: translateY(-1px); }
     .cta-button .arrow { font-size: 1rem; }
 
+    .slide-vervolg .cta-button--ghost {
+      background: transparent;
+      color: var(--tree);
+      border: 1.5px solid var(--tree);
+    }
+
+    .slide-vervolg .cta-button--ghost:hover {
+      background: rgba(42, 55, 35, 0.06);
+      color: var(--creek);
+      border-color: var(--creek);
+      transform: translateY(-1px);
+    }
+
+    .cta-buttons-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      align-items: stretch;
+    }
+
     .signature {
       font-family: var(--font-head);
       font-style: italic;
@@ -976,15 +1250,7 @@
       .goal-hero-clean { grid-template-columns: 1fr; gap: 1rem; }
       .cta-block { grid-template-columns: 1fr; gap: 1.5rem; }
       .slide { padding: 5vh 6vw 10vh; }
-      .tiers { grid-template-columns: 1fr; }
-      .tier {
-        border-right: none;
-        border-bottom: 1px solid var(--line);
-        padding: 1.5rem 0;
-      }
-      .tier:first-child { padding-top: 1.5rem; }
-      .tier:last-child { border-bottom: none; }
-      .tier-featured { top: 1.5rem; right: 0; }
+      .budget-table td:last-child { white-space: normal; }
     }
   </style>
 </head>
@@ -1009,7 +1275,7 @@
         <p class="cover-tagline">
           Drie AI-nerds maken van de Camino hun kantoor: 115 km,
           live bouwen in beeld, daarna een echte overdracht aan MIND.
-          Sponsoring zet dit verhaal op de kaart, inhoudelijk én zichtbaar.
+          Sponsoring zet dit verhaal op de kaart. Loop jij met ons mee?
         </p>
         <div class="cover-foot-meta">
           Tui naar Santiago<br />
@@ -1018,20 +1284,26 @@
       </div>
     </section>
 
-    <!-- ============ SLIDE 2: WAT IS DIT? ============ -->
-    <section class="slide" data-index="1">
+    <!-- ============ SLIDE 2: WAT WIJ DOEN ============ -->
+    <section class="slide slide--center" data-index="1">
       <div class="topbar">
         <div class="logo">
           <span class="logo-mark" aria-hidden="true"></span>
           back to being
         </div>
+        <div class="topbar-right">
+          <span>Het project</span>
+          <span>02 / 07</span>
+        </div>
       </div>
 
+      <span class="pill">Het project</span>
+
       <h1 class="headline">
-        Eén pelgrimstocht, één live bouwproces, één overdracht aan <em>MIND.</em>
+        Wat wij precies gaan doen
       </h1>
 
-      <div class="story-frame">
+      <div class="story-frame story-frame--prose-lg">
         <p>
           Wij zijn drie AI nerds uit Amsterdam, ook founders, maar vooral
           mensen die liever bouwen dan slides maken. Deze zomer lopen we de
@@ -1052,7 +1324,7 @@
     </section>
 
     <!-- ============ SLIDE 3: WAAROM (verhaal) ============ -->
-    <section class="slide" data-index="2">
+    <section class="slide slide--center" data-index="2">
       <div class="topbar">
         <div class="logo">
           <span class="logo-mark" aria-hidden="true"></span>
@@ -1067,11 +1339,10 @@
       <span class="pill">De filosofie</span>
 
       <h1 class="headline">
-        We nemen het kantoor<br />
-        <em>naar buiten.</em>
+        We nemen kantoor mee naar buiten
       </h1>
 
-      <div class="story-frame">
+      <div class="story-frame story-frame--prose-lg">
         <p>
           Niet bouwen vanachter een bureau, maar lopend, reflecterend en in
           beweging. We laten zien dat tech ons juist <strong>menselijker</strong>
@@ -1106,7 +1377,7 @@
       <span class="pill">Het doel</span>
 
       <h1 class="headline">
-        Help ons <em>€30.000</em> op te halen.
+        Help ons <em>€30.000</em> op te halen
       </h1>
 
       <div class="goal-hero-clean">
@@ -1114,32 +1385,18 @@
         <div class="goal-side-clean">
           <div class="label">Projectfinanciering</div>
           <p>
-            Dit is geen donatiepot maar budget om het verhaal echt goed te
-            doen, met zichtbare partnerwaarde. <strong>Zo zetten we het in.</strong>
+            €30.000 is geen donatiepot, maar een budget om dit verhaal goed uit te voeren
+            en professioneel zichtbaar te maken.
           </p>
         </div>
       </div>
 
       <div class="goal-story-wrap story-frame">
         <p>
-          We willen dertigduizend euro bij elkaar brengen. Dat geld zetten we
-          in zodat het pad, het bouwen en de overdracht aan MIND ook na de
-          hike blijven leven op beeld, met ruimte voor een sterke mini-docu.
-        </p>
-        <p>
-          We investeren in <strong>tech en AI</strong>, met hardware, credits
-          en software zodat we onderweg betrouwbaar kunnen werken met spraak,
-          smart glasses en audio die meegaat in het landschap. We dekken
-          <strong>reis en verblijf</strong> voor zes dagen met drie AI nerds
-          plus crew, veilig en productief onderweg. We besteden aan
-          <strong>kleding en uitrusting</strong> die in beeld moet en mag,
-          met schoeisel en rugzakken en gear dat het verhaal eer aandoet.
-        </p>
-        <p class="goal-inset-note goal-inset-note--flat">
-          Ter verduidelijking denken we ongeveer elfduizend vijfhonderd euro
-          voor de docu, ongeveer zevenduizend vijfhonderd voor tech, hetzelfde
-          bedrag voor reis en verblijf, en ongeveer drieduizend vijfhonderd
-          voor uitrusting.
+          Samen met partners zorgen we voor zichtbaarheid, kwaliteit op het pad en een
+          documentaire die ook na de hike blijft leven. De verdeling per post lichten we
+          transparant toe op de volgende slide, als richting, niet als harde belofte per
+          bonnetje.
         </p>
       </div>
 
@@ -1149,95 +1406,72 @@
         </div>
         <div class="goal-progress-meta">
           <span class="goal-progress-amount">€0</span>
-          <span class="goal-progress-label">reeds toegezegd, 0%</span>
+          <span class="goal-progress-label">Voortgang richting doel</span>
         </div>
       </div>
     </section>
 
-    <!-- ============ SLIDE 5: PARTNER + SPONSORTIERS ============ -->
-    <section class="slide slide-tiers" data-index="4">
+    <!-- ============ SLIDE 5: BUDGET ============ -->
+    <section class="slide slide-budget slide--center" data-index="4">
       <div class="topbar">
         <div class="logo">
           <span class="logo-mark" aria-hidden="true"></span>
           back to being
         </div>
         <div class="topbar-right">
-          <span>Partnerschap</span>
+          <span>Budget</span>
           <span>05 / 07</span>
         </div>
       </div>
 
-      <span class="pill">Partner worden</span>
+      <span class="pill">Transparantie</span>
 
       <h1 class="headline">
-        Word jij onze<br />
-        <em>partner in dit verhaal?</em>
+        Waar gaat het budget<br />
+        <em>naartoe?</em>
       </h1>
 
-      <p class="lede">
-        We hebben je nodig om dit waar te maken. Zonder partners blijft het
-        bij plannen op papier. Je naam of merk komt in de mini-docu op een
-        manier die bij het verhaal hoort, niet als los logo. We maken
-        content waarin zichtbaar wordt hoe jullie deze journey mogelijk
-        hebben gemaakt, klaar voor jullie kanalen. Daarnaast gaan we samen
-        het gesprek openen over wat jullie nog meer terug willen zien en we
-        denken graag mee over maatwerk waar dat logisch is. Hieronder drie
-        manieren om in te stappen, in cash of in natura.
+      <p class="lede lede--wide">
+        We werken met flexibele sponsoring: de ene partner draagt bijvoorbeeld €2.000,
+        een andere €5.000 of €7.000, zolang we samen richting €30.000 gaan. Geen vaste
+        pakketten waar je in moet passen, wel heldere afspraken per partner.
       </p>
 
-      <div class="tiers">
-        <div class="tier tier-main">
-          <span class="tier-featured">Meest impact</span>
-          <span class="tier-tag">Hoofdsponsor</span>
-          <div class="tier-amount">€15.000</div>
-          <div class="tier-spots">Volledig pakket</div>
-          <div class="tier-narrative">
-            <p>
-              Als hoofdsponsor sta je met je naam in de titel van de
-              mini-docu, presented by. We komen naar je organisatie voor een
-              walking workshop en een AI sessie. Je krijgt een custom pakket
-              met beelden, quotes en bewerkingen voor je eigen kanalen. Je
-              merk gaat mee in onze earned media aanpak en je bent welkom als
-              spreker bij het debrief moment na de Camino.
-            </p>
-          </div>
-        </div>
-        <div class="tier">
-          <span class="tier-tag">Co sponsor</span>
-          <div class="tier-amount">€5.000</div>
-          <div class="tier-spots">Verbonden aan het verhaal</div>
-          <div class="tier-narrative">
-            <p>
-              Als co sponsor krijg je logo en vermelding in de mini-docu, een
-              plek bij de gezamenlijke walking workshop, een gedeeld content
-              pakket voor je eigen kanalen en een gedeelde vermelding in earned
-              media.
-            </p>
-          </div>
-        </div>
-        <div class="tier">
-          <span class="tier-tag">Supporter</span>
-          <div class="tier-amount">In natura</div>
-          <div class="tier-spots">Goederen of diensten</div>
-          <div class="tier-examples">
-            <strong>Denk aan</strong>
-            Hardware zoals MacBooks en smart glasses, AI credits, gear en
-            verblijf. Substantiële bijdragen schalen we mee naar co sponsor of
-            hoofdsponsor niveau.
-          </div>
-          <div class="tier-narrative">
-            <p>
-              Je product is zichtbaar in beeld waar dat past, je staat in de
-              aftiteling van de mini-docu, je krijgt als eerste toegang tot
-              docu en updates, en je komt voor in updates en social content.
-            </p>
-          </div>
+      <div class="budget-board">
+        <table class="budget-table" aria-label="Globale budgetindicatie (richting)">
+          <tbody>
+            <tr><td>Tech &amp; AI (hardware, credits, tooling)</td><td>€&nbsp;11.500</td></tr>
+            <tr><td>Documentaire</td><td>€&nbsp;7.500</td></tr>
+            <tr><td>Productie (crew, planning, post)</td><td>€&nbsp;3.500</td></tr>
+            <tr><td>Reiskosten</td><td>€&nbsp;2.800</td></tr>
+            <tr><td>Voeding</td><td>€&nbsp;900</td></tr>
+            <tr><td>Kleding &amp; uitrusting</td><td>€&nbsp;700</td></tr>
+            <tr><td>Overige benodigdheden</td><td>€&nbsp;500</td></tr>
+            <tr><td>Partnerstrategie &amp; outreach</td><td>€&nbsp;2.600</td></tr>
+          </tbody>
+        </table>
+        <div class="budget-foot">
+          <span>Indicatief totaal</span>
+          <span>€&nbsp;30.000</span>
         </div>
       </div>
+
+      <p class="budget-aside">
+        <strong>TechLeap</strong> staat al in het traject als partner rond strategie en netwerk.
+        We benaderen andere partijen met het idee dat er al inhoudelijke interesse is vanuit
+        relevante namen. Zodra één sterke partner instapt, wordt het voor volgende sponsors
+        eenvoudiger om vertrouwen te krijgen in dit project.
+      </p>
+
+      <p class="micro-note">
+        Optioneel kunnen we naast de hoofddocumentaire korte, sponsor-specifieke clips maken
+        die laten zien hoe jullie bijdrage landt in het verhaal, zolang de hoofddocu herkenbaar
+        als verhaal blijft en niet als een reclameblock voelt.
+      </p>
     </section>
 
-    <!-- ============ SLIDE 6: VERVOLG ============ -->
-    <section class="slide slide-vervolg" data-index="5">
+    <!-- ============ SLIDE 6: VERVOLG / CTA ============ -->
+    <section class="slide slide-vervolg slide--center" data-index="5">
       <div class="topbar">
         <div class="logo">
           <span class="logo-mark" aria-hidden="true"></span>
@@ -1249,50 +1483,49 @@
         </div>
       </div>
 
-      <span class="pill">Praktisch</span>
+      <span class="pill">Meedoen</span>
 
       <h1 class="headline">
-        Van intentie naar<br />
-        <em>concrete afspraken.</em>
+        Wil jij een rol spelen in het <em>verhaal</em> dat wij gaan vertellen?
       </h1>
 
-      <p class="lede">
-        We nemen een korte call om pakket, timing en content met elkaar te
-        verbinden. Geen eindeloze trajecten. We willen snel helderheid voor
-        jullie en voor ons team op het pad.
+      <p class="lede lede--wide">
+        Geen eindeloze trajecten: we plannen een korte call, zetten afspraken scherp en gaan
+        daarna het pad op. Jouw bijdrage schalen we inhoudelijk mee, zonder starre tier-lijst.
       </p>
 
-      <div class="story-frame">
+      <div class="story-frame story-frame--prose-lg">
         <p>
-          Als onderdeel van het partnership brengen we het kantoor naar
-          buiten bij jullie, met een walking workshop en een AI sessie op
-          jullie locatie. Dat is iets wat je in deze vorm zelden ergens anders
-          boekt.
-        </p>
-        <p>
-          We blijven het verhaal actief uitdragen richting media en ons
-          netwerk en jullie merk reist mee waar dat past bij het narratief.
-        </p>
-        <p>
-          Na de Camino plannen we een gezamenlijk debrief moment om resultaat,
-          docu en vervolg te delen met jullie stakeholders.
+          Als onderdeel van het partnership brengen we het kantoor naar buiten bij jullie, met
+          een walking workshop en een AI-sessie op jullie locatie. Na de Camino plannen we een
+          gezamenlijk debrief om resultaat, docu en vervolg te delen met jullie stakeholders.
         </p>
       </div>
 
       <div class="cta-block">
-        <p class="cta-text">
-          Volgende stap is tien minuten koffie. Een kort gesprek en een heldere
-          vervolgstap. Contact staat op de volgende slide.
-        </p>
         <div>
-          <button class="cta-button" type="button" id="cta-next-contact">
-            Volgende slide <span class="arrow">→</span>
+          <p class="cta-text">
+            Zo zet je de volgende stap — kies wat bij je past:
+          </p>
+          <ul class="cta-actions">
+            <li><strong>Plan een call</strong> — tien tot twintig minuten, dan weten we waar we staan.</li>
+            <li><strong>Mail ons</strong> — één mailtje volstaat om los te komen.</li>
+            <li><strong>Kom langs op ons kantoor</strong> in Amsterdam, of we komen graag bij jullie langs.</li>
+          </ul>
+        </div>
+        <div class="cta-buttons-stack">
+          <a class="cta-button"
+            href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being%3A%20afspraak&amp;body=Hi%2C%0A%0AIk%20wil%20Back%20to%20Being%20bespreken%20(plan%20een%20call%20%2F%20mail%20%2F%20langs%20komen).%0A%0AHartelijke%20groet">
+            Mail voor een afspraak <span class="arrow">→</span>
+          </a>
+          <button class="cta-button cta-button--ghost" type="button" id="cta-next-contact">
+            Naar contact <span class="arrow">→</span>
           </button>
         </div>
       </div>
     </section>
 
-    <!-- ============ SLIDE 7: CLOSER ============ -->
+    <!-- ============ SLIDE 7: CONTACT ============ -->
     <section class="slide closer" data-index="6">
       <div class="topbar">
         <div class="logo">
@@ -1306,32 +1539,46 @@
       </div>
 
       <div class="closer-body">
-        <h1 class="closer-title">Laten we koffie drinken.</h1>
-        <p class="closer-sub">
-          Stuur dit deck intern rond of plan direct tien minuten met ons,
+        <h1 class="closer-title">Contact</h1>
+        <p class="closer-intro">
+          Net als op een contactpagina op de site: hier vind je waar we zitten, hoe je ons
+          bereikt en wat de uitnodiging is. Stuur dit deck intern rond of neem direct contact op,
           wat voor jou het snelst helderheid geeft.
         </p>
 
-        <!-- Telefoon staat ingesteld onderaan het script (CONTACT_PHONE_*) -->
-        <a class="cta-button closer-cta-main"
-          href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being%3A%2010%20min%20koffie&amp;body=Hi%2C%0A%0AIk%20wil%20graag%20een%20kort%20koffiemoment%20(10%20min)%20om%20Back%20to%20Being%20te%20bespreken.%0A%0AHartelijke%20groet">
-          Laten we koffie drinken <span class="arrow">→</span>
-        </a>
+        <div class="closer-actions">
+          <a href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being%3A%20plan%20een%20call">Plan een call</a>
+          <a href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being%3A%20vraag">Mail ons</a>
+        </div>
 
-        <div class="closer-channels">
-          <p class="closer-phone-wrap" hidden>
-            <span class="closer-channel-label">Tel</span>
-            <a class="closer-channel-link closer-phone-link" href="#">…</a>
-          </p>
+        <div class="closer-contact-grid">
+          <div class="closer-card">
+            <h2>Locatie</h2>
+            <p>Amsterdam. We spreken graag af op ons kantoor of komen bij jullie langs op locatie.</p>
+          </div>
+          <div class="closer-card">
+            <h2>E-mail</h2>
+            <p>
+              <a class="closer-channel-link closer-mail-link"
+                href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being">Caesar.schoorl@gmail.com</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="closer-phone-wrap closer-card" hidden>
+          <h2>Telefoon</h2>
           <p>
-            <span class="closer-channel-label">Mail</span>
-            <a class="closer-channel-link closer-mail-link"
-              href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being%3A%2010%20min%20koffie">Caesar.schoorl@gmail.com</a>
+            <a class="closer-channel-link closer-phone-link" href="#">…</a>
           </p>
         </div>
 
+        <a class="cta-button closer-cta-main"
+          href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being%3A%20gesprek&amp;body=Hi%2C%0A%0AIk%20wil%20een%20gesprek%20over%20Back%20to%20Being.%0A%0AHartelijke%20groet">
+          Start met een gesprek <span class="arrow">→</span>
+        </a>
+
         <p class="closer-signoff">
-          <strong>De wereld als ons kantoor</strong>, we horen graag of jullie met ons dit hoofdstuk willen schrijven. Zomer 2026.
+          <strong>De wereld als ons kantoor</strong> — we horen graag of jullie met ons dit hoofdstuk willen schrijven. Zomer 2026.
         </p>
       </div>
     </section>
@@ -1357,8 +1604,8 @@
       const CONTACT_PHONE_E164_DIGITS = '31683032377';
       const CONTACT_PHONE_SHOW = '+31 6 83032377';
 
-      // Live update voor pitch. Pas SECURED_AMOUNT aan vóór het gesprek.
-      const SECURED_AMOUNT = 0;     // EUR reeds toegezegd
+      // Live update voor pitch. Pas SECURED_AMOUNT aan vóór het gesprek (optioneel).
+      const SECURED_AMOUNT = 0;     // EUR al ingevuld richting doel
       const TARGET_AMOUNT  = 30000; // EUR doel
 
       slides.forEach((slide, i) => {
@@ -1432,7 +1679,9 @@
         var pct = Math.max(0, Math.min(100, Math.round((SECURED_AMOUNT / TARGET_AMOUNT) * 100)));
         var formatted = '€' + Number(SECURED_AMOUNT).toLocaleString('nl-NL');
         amount.textContent = formatted;
-        label.textContent = 'reeds toegezegd, ' + pct + '%';
+        label.textContent = pct > 0
+          ? pct + '% richting €30.000'
+          : 'Nog ruimte om mee te bouwen';
         bar.setAttribute('aria-valuenow', String(SECURED_AMOUNT));
         bar.setAttribute('aria-valuemax', String(TARGET_AMOUNT));
         // Triggert na 1 frame zodat transitie zichtbaar is
