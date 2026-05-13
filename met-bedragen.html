@@ -199,10 +199,10 @@
 
     .slide.dark .lede { color: rgba(247, 245, 240, 0.7); }
 
-    /* ---------- Slide 1: COVER (wit + groen accent, zelfde familie als deck) ---------- */
+    /* ---------- Slide 1: COVER (zelfde crème als rest van het deck) ---------- */
     .slide.cover {
       justify-content: space-between;
-      background: #ffffff;
+      background: var(--canvas);
       color: var(--charcoal);
     }
 
@@ -700,24 +700,24 @@
     }
 
     .slide-partners .partner-logo-tile {
-      border: 1.5px solid var(--line);
-      border-radius: 14px;
-      background: rgba(167, 189, 213, 0.14);
-      padding: clamp(1.25rem, 2.5vw, 2rem) clamp(1rem, 2vw, 1.5rem);
+      border: none;
+      border-radius: 0;
+      background: transparent;
+      padding: clamp(0.35rem, 1.2vw, 0.75rem) clamp(0.25rem, 1vw, 0.5rem);
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: clamp(5.25rem, 13vh, 7.5rem);
+      min-height: 0;
     }
 
     .slide-partners .partner-logo-tile img {
-      max-width: min(100%, 12rem);
-      max-height: clamp(2.25rem, 5vw, 3.25rem);
+      max-width: min(100%, 13rem);
+      max-height: clamp(2.5rem, 6vw, 4rem);
       width: auto;
       height: auto;
       object-fit: contain;
-      filter: grayscale(0.08);
-      opacity: 0.92;
+      filter: grayscale(0.04);
+      opacity: 1;
     }
 
     .slide-partners .slide-partners-cta {
@@ -925,9 +925,27 @@
       font-style: italic;
       font-weight: 400;
       font-size: clamp(3.5rem, 7.5vw, 7.5rem);
-      color: var(--creek);
+      color: var(--tree);
       line-height: 0.9;
       letter-spacing: -0.02em;
+    }
+
+    /* Slide 4 body: zelfde Inter Tight-helderheid als slide 2–3 */
+    .slide-doel .goal-story-wrap.story-frame p {
+      font-family: var(--font-sub);
+      font-style: normal;
+      font-weight: 400;
+      font-size: clamp(1.05rem, 1.42vw, 1.38rem);
+      letter-spacing: 0.01em;
+      line-height: 1.55;
+      color: var(--ink-soft);
+    }
+
+    .slide-doel .goal-story-wrap.story-frame strong {
+      font-family: inherit;
+      font-style: normal;
+      font-weight: 600;
+      color: var(--tree);
     }
 
     /* ---------- Sponsor tiers ---------- */
@@ -1517,7 +1535,7 @@
       <div class="slide-wat-doen-cta">
         <button type="button" class="cta-button" id="cta-waarom-next"
           aria-label="Volgende slide">
-          Waarvoor is €30.000? <span class="arrow" aria-hidden="true">→</span>
+          Wat hebben we nodig? <span class="arrow" aria-hidden="true">→</span>
         </button>
       </div>
     </section>
@@ -1575,7 +1593,7 @@
           <img src="assets/partners/techleap.webp" alt="TechLeap" width="200" height="56" loading="lazy" decoding="async" />
         </div>
         <div class="partner-logo-tile" role="listitem">
-          <img src="assets/partners/aiam.svg" alt="AIAM" width="200" height="56" loading="lazy" decoding="async" />
+          <img src="assets/partners/aiam.svg" alt="E.A.I.M." width="200" height="56" loading="lazy" decoding="async" />
         </div>
         <div class="partner-logo-tile" role="listitem">
           <img src="assets/partners/tag.webp" alt="TAG" width="200" height="56" loading="lazy" decoding="async" />
@@ -1633,7 +1651,7 @@
         <div class="recap-item">
           <span class="recap-kicker">Partners</span>
           <p class="recap-text">
-            <strong>TechLeap</strong>, <strong>AIAM</strong>, <strong>TAG</strong> en <strong>Lerai</strong> zijn nu al mee. Het verhaal heeft tractie.
+            <strong>TechLeap</strong>, <strong>E.A.I.M.</strong>, <strong>TAG</strong> en <strong>Lerai</strong> zijn nu al mee. Het verhaal heeft tractie.
           </p>
         </div>
       </div>
@@ -1662,6 +1680,26 @@
 
         <div class="closer-team-grid">
           <article class="closer-team-card">
+            <h2>Stijn</h2>
+            <p class="closer-team-meta">Back to Being · Amsterdam</p>
+            <div class="closer-team-links">
+              <a class="closer-mail-link"
+                href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being%3A%20partner">Caesar.schoorl@gmail.com</a>
+              <a href="https://www.linkedin.com/in/stijn-smit-a779b1193/"
+                target="_blank" rel="noopener noreferrer">LinkedIn-profiel →</a>
+            </div>
+          </article>
+          <article class="closer-team-card">
+            <h2>Max</h2>
+            <p class="closer-team-meta">Back to Being · Amsterdam</p>
+            <div class="closer-team-links">
+              <a class="closer-mail-link"
+                href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being%3A%20partner">Caesar.schoorl@gmail.com</a>
+              <a href="https://www.linkedin.com/in/max-helmantel-852572167/"
+                target="_blank" rel="noopener noreferrer">LinkedIn-profiel →</a>
+            </div>
+          </article>
+          <article class="closer-team-card">
             <h2>Caesar</h2>
             <p class="closer-team-meta">Back to Being · Amsterdam</p>
             <div class="closer-team-links">
@@ -1671,27 +1709,12 @@
                 target="_blank" rel="noopener noreferrer">LinkedIn-profiel →</a>
             </div>
           </article>
-          <article class="closer-team-card">
-            <h2>Stijn</h2>
-            <p class="closer-team-meta">Smart Media Production · Amsterdam</p>
-            <div class="closer-team-links">
-              <a href="https://www.linkedin.com/in/stijn-smit-a779b1193/"
-                target="_blank" rel="noopener noreferrer">LinkedIn-profiel →</a>
-            </div>
-          </article>
-          <article class="closer-team-card">
-            <h2>Max</h2>
-            <p class="closer-team-meta">Smart Media Production · Amsterdam</p>
-            <div class="closer-team-links">
-              <a href="https://www.linkedin.com/in/max-helmantel-852572167/"
-                target="_blank" rel="noopener noreferrer">LinkedIn-profiel →</a>
-            </div>
-          </article>
         </div>
 
         <a class="cta-button closer-cta-main"
-          href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being%3A%20partner&amp;body=Hi%2C%0A%0AIk%20wil%20meer%20weten%20over%20partner%20worden%20voor%20Back%20to%20Being.%0A%0AHartelijke%20groet">
-          Schrijf ons voor een gesprek <span class="arrow">→</span>
+          href="https://calendly.com/caesardigitalmarketer"
+          target="_blank" rel="noopener noreferrer">
+          Plan een gesprek via Calendly <span class="arrow">→</span>
         </a>
 
         <p class="closer-signoff">
