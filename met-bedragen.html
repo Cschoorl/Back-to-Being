@@ -647,7 +647,7 @@
       width: 100%;
     }
 
-    /* Slide 7: contact als antwoord op vraag */
+    /* Slide 7: partner-closer + team */
     .closer-title.closer-title--question {
       font-family: var(--font-sub);
       font-weight: 600;
@@ -656,12 +656,12 @@
       letter-spacing: -0.03em;
       line-height: 1.1;
       margin-bottom: 0.65rem;
-      max-width: min(44ch, 96vw);
+      max-width: min(52ch, 96vw);
     }
 
     .slide-q-sub--closer {
       margin-bottom: 1.75rem;
-      max-width: 42ch;
+      max-width: min(52ch, 94vw);
     }
     /* ---------- Slide 5: Partners (social proof) ---------- */
     .slide.slide-partners.slide--center .topbar {
@@ -851,6 +851,69 @@
     .closer-actions a:hover {
       border-color: var(--creek);
       color: var(--creek);
+    }
+
+    .closer-team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem 1.25rem;
+      width: 100%;
+      margin-bottom: 1.75rem;
+    }
+
+    .closer-team-card {
+      border: 1.5px solid var(--line);
+      border-radius: 12px;
+      padding: 1rem 1.15rem;
+      background: rgba(167, 189, 213, 0.12);
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      min-height: 100%;
+    }
+
+    .closer-team-card h2 {
+      font-family: var(--font-sub);
+      font-size: 1.05rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin: 0;
+      text-transform: none;
+    }
+
+    .closer-team-meta {
+      font-family: var(--font-body);
+      font-size: clamp(0.82rem, 0.92vw, 0.88rem);
+      line-height: 1.4;
+      color: var(--ink-soft);
+      margin: 0;
+    }
+
+    .closer-team-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      margin-top: 0.25rem;
+    }
+
+    .closer-team-links a {
+      font-family: var(--font-sub);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--creek);
+      text-decoration: none;
+    }
+
+    .closer-team-links a:hover {
+      text-decoration: underline;
+    }
+
+    .closer-team-links .closer-mail-link {
+      word-break: break-all;
+      font-weight: 500;
+      font-family: var(--font-body);
+      font-size: 0.88rem;
     }
 
     /* ---------- Slide 4: €30k + verhaal (geen voortgangsbalk) ---------- */
@@ -1341,6 +1404,7 @@
       .row .row-detail { grid-column: 2; text-align: left; }
       .cta-block { grid-template-columns: 1fr; gap: 1.5rem; }
       .slide { padding: 5vh 6vw 10vh; }
+      .closer-team-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -1597,47 +1661,47 @@
       </div>
 
       <div class="closer-body">
-        <h1 class="closer-title closer-title--question">Waar bereiken jullie ons?</h1>
+        <h1 class="closer-title closer-title--question">Word jij partner in dit verhaal?</h1>
         <p class="slide-q-sub slide-q-sub--closer">
-          Locatie, mail en een uitnodiging om te sparren over Back to Being.
-        </p>
-        <p class="closer-intro">
-          Stuur dit deck intern rond of neem direct contact op—wat voor jou het snelst helderheid geeft.
+          Amsterdam · drie namen, echte profielen—mail ons of klik door naar LinkedIn.
         </p>
 
-        <div class="closer-actions">
-          <a href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being%3A%20plan%20een%20call">Plan een call</a>
-          <a href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being%3A%20vraag">Mail ons</a>
-        </div>
-
-        <div class="closer-contact-grid">
-          <div class="closer-card">
-            <h2>Locatie</h2>
-            <p>Amsterdam. We spreken graag af op ons kantoor of komen bij jullie langs op locatie.</p>
-          </div>
-          <div class="closer-card">
-            <h2>E-mail</h2>
-            <p>
-              <a class="closer-channel-link closer-mail-link"
-                href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being">Caesar.schoorl@gmail.com</a>
-            </p>
-          </div>
-        </div>
-
-        <div class="closer-phone-wrap closer-card" hidden>
-          <h2>Telefoon</h2>
-          <p>
-            <a class="closer-channel-link closer-phone-link" href="#">…</a>
-          </p>
+        <div class="closer-team-grid">
+          <article class="closer-team-card">
+            <h2>Stijn</h2>
+            <p class="closer-team-meta">Smart Media Production · Amsterdam</p>
+            <div class="closer-team-links">
+              <a href="https://www.linkedin.com/in/stijn-smit-a779b1193/"
+                target="_blank" rel="noopener noreferrer">LinkedIn-profiel →</a>
+            </div>
+          </article>
+          <article class="closer-team-card">
+            <h2>Max</h2>
+            <p class="closer-team-meta">Smart Media Production · Amsterdam</p>
+            <div class="closer-team-links">
+              <a href="https://www.linkedin.com/in/max-helmantel-852572167/"
+                target="_blank" rel="noopener noreferrer">LinkedIn-profiel →</a>
+            </div>
+          </article>
+          <article class="closer-team-card">
+            <h2>Caesar</h2>
+            <p class="closer-team-meta">Back to Being · Amsterdam</p>
+            <div class="closer-team-links">
+              <a class="closer-mail-link"
+                href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being%3A%20partner">Caesar.schoorl@gmail.com</a>
+              <a href="https://www.linkedin.com/in/caesar-schoorl-16232b229/"
+                target="_blank" rel="noopener noreferrer">LinkedIn-profiel →</a>
+            </div>
+          </article>
         </div>
 
         <a class="cta-button closer-cta-main"
-          href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being%3A%20gesprek&amp;body=Hi%2C%0A%0AIk%20wil%20een%20gesprek%20over%20Back%20to%20Being.%0A%0AHartelijke%20groet">
-          Start met een gesprek <span class="arrow">→</span>
+          href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being%3A%20partner&amp;body=Hi%2C%0A%0AIk%20wil%20meer%20weten%20over%20partner%20worden%20voor%20Back%20to%20Being.%0A%0AHartelijke%20groet">
+          Schrijf ons voor een gesprek <span class="arrow">→</span>
         </a>
 
         <p class="closer-signoff">
-          <strong>De wereld als ons kantoor</strong> — we horen graag of jullie met ons dit hoofdstuk willen schrijven. Zomer 2026.
+          <strong>De wereld als ons kantoor.</strong> We horen graag of jullie met ons dit hoofdstuk willen schrijven.
         </p>
       </div>
     </section>
