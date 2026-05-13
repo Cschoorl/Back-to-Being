@@ -674,35 +674,34 @@
       margin: 0 0 clamp(1.25rem, 3vh, 2rem);
     }
 
-    .slide-partners .partner-logos {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: clamp(1rem, 2.5vw, 1.75rem);
-      width: 100%;
-      max-width: min(52rem, 94vw);
-      margin: 0 auto;
-      flex: 1;
-      align-items: stretch;
-    }
-
-    .slide-partners .partner-logo-tile {
-      border: none;
-      border-radius: 0;
-      background: transparent;
-      padding: clamp(0.35rem, 1.2vw, 0.75rem) clamp(0.25rem, 1vw, 0.5rem);
+    /* Website-achtige partnerstrip: capsule op canvas, zoals screenshot */
+    .partner-strip {
       display: flex;
-      align-items: center;
+      flex-wrap: wrap;
       justify-content: center;
-      min-height: 0;
+      align-items: center;
+      gap: clamp(1.75rem, 4.5vw, 3.25rem);
+      row-gap: clamp(1.25rem, 3vh, 2rem);
+      padding: clamp(1.25rem, 2.8vh, 1.85rem) clamp(1.75rem, 4.5vw, 2.75rem);
+      margin: 0 auto;
+      width: fit-content;
+      max-width: min(56rem, 96vw);
+      flex: 1;
+      align-self: center;
+      background: rgba(255, 255, 255, 0.45);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      box-shadow: 0 1px 0 rgba(25, 43, 74, 0.04);
     }
 
-    .slide-partners .partner-logo-tile img {
-      max-width: min(100%, 13rem);
-      max-height: clamp(2.5rem, 6vw, 4rem);
+    .partner-strip img {
+      display: block;
+      flex: 0 1 auto;
       width: auto;
       height: auto;
+      max-height: clamp(2.35rem, 4.6vw, 3.55rem);
+      max-width: min(11.5rem, 28vw);
       object-fit: contain;
-      filter: grayscale(0.04);
       opacity: 1;
     }
 
@@ -714,8 +713,9 @@
     }
 
     @media (max-width: 720px) {
-      .slide-partners .partner-logos {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+      .partner-strip {
+        border-radius: 20px;
+        padding: clamp(1.1rem, 2.5vh, 1.5rem) clamp(1.25rem, 4vw, 1.75rem);
       }
     }
 
@@ -1549,19 +1549,11 @@
         Ze lopen nu al met ons mee.
       </p>
 
-      <div class="partner-logos" role="list">
-        <div class="partner-logo-tile" role="listitem">
-          <img src="assets/partners/techleap.webp" alt="TechLeap" width="200" height="56" loading="lazy" decoding="async" />
-        </div>
-        <div class="partner-logo-tile" role="listitem">
-          <img src="assets/partners/aiam.svg" alt="E.A.I.M." width="200" height="56" loading="lazy" decoding="async" />
-        </div>
-        <div class="partner-logo-tile" role="listitem">
-          <img src="assets/partners/tag.webp" alt="TAG" width="200" height="56" loading="lazy" decoding="async" />
-        </div>
-        <div class="partner-logo-tile" role="listitem">
-          <img src="assets/partners/lerai.svg" alt="Lerai" width="200" height="56" loading="lazy" decoding="async" />
-        </div>
+      <div class="partner-strip" role="group" aria-label="Partners">
+        <img src="assets/partners/techleap-wordmark.png" alt="TechLeap" width="149" height="53" loading="lazy" decoding="async" />
+        <img src="assets/partners/ai-am-wordmark.png" alt="ai.am" width="149" height="49" loading="lazy" decoding="async" />
+        <img src="assets/partners/lerai-wordmark.png" alt="Lerai" width="102" height="54" loading="lazy" decoding="async" />
+        <img src="assets/partners/tag-wordmark.png" alt="TAG" width="116" height="37" loading="lazy" decoding="async" />
       </div>
 
       <div class="slide-partners-cta">
@@ -1612,7 +1604,7 @@
         <div class="recap-item">
           <span class="recap-kicker">Partners</span>
           <p class="recap-text">
-            <strong>TechLeap</strong>, <strong>E.A.I.M.</strong>, <strong>TAG</strong> en <strong>Lerai</strong> zijn nu al mee. Het verhaal heeft tractie.
+            <strong>TechLeap</strong>, <strong>ai.am</strong>, <strong>Lerai</strong> en <strong>TAG</strong> zijn nu al mee. Het verhaal heeft tractie.
           </p>
         </div>
       </div>
