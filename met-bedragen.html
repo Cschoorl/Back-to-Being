@@ -490,14 +490,26 @@
     }
 
     .slide-wat-doen .wat-doen-grid,
-    .slide-waarom .wat-doen-grid,
-    .slide-doel .wat-doen-grid {
+    .slide-waarom .wat-doen-grid {
       display: flex;
       flex-direction: column;
       align-items: stretch;
       gap: clamp(2.75rem, 6vh, 4.5rem);
       width: 100%;
       max-width: min(54ch, 92vw);
+      margin: 0 auto;
+      align-self: center;
+      flex: 1;
+    }
+
+    /* Slide 4: Gear / Docu / Reiskosten naast elkaar */
+    .slide-doel .wat-doen-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: start;
+      gap: clamp(1.25rem, 2.75vw, 2.25rem);
+      width: 100%;
+      max-width: min(94vw, 68rem);
       margin: 0 auto;
       align-self: center;
       flex: 1;
@@ -511,14 +523,24 @@
 
     /* Zelfde familie als cover-tagline (pagina 1): Inter Tight */
     .slide-wat-doen .wat-doen-block p,
-    .slide-waarom .wat-doen-block p,
-    .slide-doel .wat-doen-block p {
+    .slide-waarom .wat-doen-block p {
       font-family: var(--font-sub);
       font-style: normal;
       font-weight: 400;
       font-size: clamp(1.05rem, 1.42vw, 1.38rem);
       letter-spacing: 0.01em;
       line-height: 1.55;
+      color: var(--ink-soft);
+      margin: 0;
+    }
+
+    .slide-doel .wat-doen-block p {
+      font-family: var(--font-sub);
+      font-style: normal;
+      font-weight: 400;
+      font-size: clamp(0.9rem, 1.12vw, 1.12rem);
+      letter-spacing: 0.01em;
+      line-height: 1.5;
       color: var(--ink-soft);
       margin: 0;
     }
@@ -539,6 +561,19 @@
       text-transform: uppercase;
       color: var(--tree);
       margin-bottom: 0.55rem;
+    }
+
+    @media (max-width: 960px) {
+      .slide-doel .wat-doen-grid {
+        grid-template-columns: 1fr;
+        max-width: min(54ch, 92vw);
+        gap: clamp(2rem, 5vh, 3rem);
+      }
+
+      .slide-doel .wat-doen-block p {
+        font-size: clamp(1.05rem, 1.42vw, 1.38rem);
+        line-height: 1.55;
+      }
     }
 
     .slide-wat-doen .slide-wat-doen-cta,
