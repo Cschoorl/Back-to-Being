@@ -655,14 +655,10 @@
       font-size: clamp(2.05rem, 4vw, 3.35rem);
       letter-spacing: -0.03em;
       line-height: 1.1;
-      margin-bottom: 0.65rem;
+      margin-bottom: clamp(1.25rem, 3vh, 2rem);
       max-width: min(52ch, 96vw);
     }
 
-    .slide-q-sub--closer {
-      margin-bottom: 1.75rem;
-      max-width: min(52ch, 94vw);
-    }
     /* ---------- Slide 5: Partners (social proof) ---------- */
     .slide.slide-partners.slide--center .topbar {
       margin-bottom: clamp(2vh, 4vw, 4vh);
@@ -1662,11 +1658,18 @@
 
       <div class="closer-body">
         <h1 class="closer-title closer-title--question">Word jij partner in dit verhaal?</h1>
-        <p class="slide-q-sub slide-q-sub--closer">
-          Amsterdam · drie namen, echte profielen—mail ons of klik door naar LinkedIn.
-        </p>
 
         <div class="closer-team-grid">
+          <article class="closer-team-card">
+            <h2>Caesar</h2>
+            <p class="closer-team-meta">Back to Being · Amsterdam</p>
+            <div class="closer-team-links">
+              <a class="closer-mail-link"
+                href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being%3A%20partner">Caesar.schoorl@gmail.com</a>
+              <a href="https://www.linkedin.com/in/caesar-schoorl-16232b229/"
+                target="_blank" rel="noopener noreferrer">LinkedIn-profiel →</a>
+            </div>
+          </article>
           <article class="closer-team-card">
             <h2>Stijn</h2>
             <p class="closer-team-meta">Smart Media Production · Amsterdam</p>
@@ -1680,16 +1683,6 @@
             <p class="closer-team-meta">Smart Media Production · Amsterdam</p>
             <div class="closer-team-links">
               <a href="https://www.linkedin.com/in/max-helmantel-852572167/"
-                target="_blank" rel="noopener noreferrer">LinkedIn-profiel →</a>
-            </div>
-          </article>
-          <article class="closer-team-card">
-            <h2>Caesar</h2>
-            <p class="closer-team-meta">Back to Being · Amsterdam</p>
-            <div class="closer-team-links">
-              <a class="closer-mail-link"
-                href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being%3A%20partner">Caesar.schoorl@gmail.com</a>
-              <a href="https://www.linkedin.com/in/caesar-schoorl-16232b229/"
                 target="_blank" rel="noopener noreferrer">LinkedIn-profiel →</a>
             </div>
           </article>
