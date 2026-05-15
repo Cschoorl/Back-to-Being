@@ -109,6 +109,11 @@
       border-radius: 10px;
     }
 
+    .slide.cover .logo-img {
+      height: clamp(46px, 6vh, 64px);
+      max-width: min(300px, 62vw);
+    }
+
     .slide.dark .logo-img {
       box-shadow: 0 0 0 1px rgba(167, 189, 213, 0.12);
     }
@@ -220,20 +225,25 @@
       margin-top: 6vh;
     }
 
-    .cover-foot-meta {
-      text-align: right;
-      font-family: var(--font-sub);
-      font-size: 0.7rem;
-      font-weight: 500;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--ink-soft);
-      line-height: 1.8;
+    .cover-foot-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      align-content: flex-end;
+      gap: clamp(0.55rem, 1.5vw, 1rem);
+      row-gap: 0.5rem;
       flex-shrink: 0;
+      max-width: min(24rem, 46vw);
     }
 
-    .slide.cover .cover-foot-meta {
-      color: var(--tree);
+    .cover-foot-logos img {
+      display: block;
+      height: clamp(17px, 2.1vh, 24px);
+      width: auto;
+      max-width: min(4.75rem, 18vw);
+      object-fit: contain;
+      opacity: 0.95;
     }
 
     .cover-tagline {
@@ -1397,9 +1407,39 @@
           live bouwen in beeld, daarna een echte overdracht aan MIND.
           <span class="cover-tagline-accent">Sponsoring zet dit verhaal op de kaart. Loop je met ons mee?</span>
         </p>
-        <div class="cover-foot-meta">
-          Tui naar Santiago<br />
-          Voor stichting MIND
+        <div class="cover-foot-logos" role="group" aria-label="Partners">
+          <img
+            src="assets/partners/techleap-wordmark.png"
+            alt="TechLeap"
+            width="149"
+            height="53"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src="assets/partners/ai-am-wordmark.png"
+            alt="ai.am"
+            width="149"
+            height="49"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src="assets/partners/lerai-wordmark.png"
+            alt="Lerai"
+            width="102"
+            height="54"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src="assets/partners/tag-wordmark.png"
+            alt="TAG"
+            width="116"
+            height="37"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </div>
     </section>
